@@ -205,7 +205,10 @@ small, .small {
 
 mark, .mark {
   padding: 0.2em;
-  background-color: #fcf8e3;
+  background-color: #1abc9c; 
+  color: #aeeeee;
+  
+  /* background-color: #fcf8e3; */
 }
 
 sub,
@@ -4502,10 +4505,6 @@ textarea.form-control-lg {
   color: #fff;
 }
 ::-moz-selection { /* Code for Firefox */
-  background-color: #6ec5b4;
-  color: #fff;
-}
-mark {
   background-color: #6ec5b4;
   color: #fff;
 }
