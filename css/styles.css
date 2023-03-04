@@ -144,7 +144,7 @@ h6, .h6 {
 
 p {
   margin-top: 0;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 abbr[title],
@@ -4535,6 +4535,17 @@ textarea.form-control-lg {
 .card .card-page {
   cursor: pointer;
   text-decoration: none;
+}
+.card .card-tag {
+  pointer-events: false;
+  cursor: default;
+}
+.card .card-tag mark{
+  background-color: #6ec5b4;
+  color: #fff;
+  padding: 0.3em;
+  border-radius: 0.5em;
+  font-size: 0.7em;
 }
 .card > hr {
   margin-right: 0;
