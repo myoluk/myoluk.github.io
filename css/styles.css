@@ -4588,7 +4588,7 @@ textarea.form-control-lg {
   border-color: #1abc9c;
 }
 .card:hover .card-img-top {
-  filter: brightness(1);
+  filter: brightness(100%);
 }
 .card:hover .text-muted {
   color: #1abc9c !important;
@@ -4651,7 +4651,7 @@ textarea.form-control-lg {
 .card-img-top,
 .card-img-bottom {
   width: 100%;
-  filter: brightness(0.9);
+  filter: brightness(95%);
 }
 
 .card-img,
