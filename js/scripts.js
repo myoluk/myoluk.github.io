@@ -1,5 +1,7 @@
+var cardElements;
 
 window.addEventListener('DOMContentLoaded', event => {
+    cardElements = document.querySelectorAll("#portfolio [category]");
 
     // Navbar shrink function
     var navbarShrink = function () {
@@ -44,3 +46,23 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
 });
+
+function ShowCategory(category) {
+    ShowCategoryAll();
+    category = category.toLowerCase();
+    for(let i=0; i<cardElements.length; i++){
+        if (cardElements[i].getAttribute('category') == category){
+            cardElements[i].parentNode.classList.remove('d-none');
+        }
+        else {
+            cardElements[i].parentNode.classList.add('d-none');
+        }
+    }
+
+}
+
+function ShowCategoryAll() {
+    for(let i=0; i<cardElements.length; i++){
+        cardElements[i].parentNode.classList.remove('d-none');
+    }
+}

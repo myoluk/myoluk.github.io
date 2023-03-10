@@ -4518,6 +4518,18 @@ textarea.form-control-lg {
   pointer-events: none;
 }
 
+.portfolio-tab span {
+  padding: 0 0.5rem;
+}
+.tab-category {
+  color: #1abc9c;
+  cursor: pointer;
+  text-decoration: underline;
+}
+.tab-category:active, .tab-category:hover {
+  text-decoration: none;
+}
+
 .card {
   position: relative;
   display: flex;

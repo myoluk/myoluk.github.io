@@ -68,11 +68,20 @@
                 <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
                 <div class="divider-custom-line"></div>
             </div>
+            <!-- Portfolio Tab Region-->
+            <div class="row mb-4 justify-content-center">
+                <div class="col-md-6 text-center portfolio-tab">
+                    <a class="tab-category" onclick="ShowCategoryAll()">All</a><span>|</span> 
+                    <a class="tab-category" onclick="ShowCategory('AI')">AI</a><span>|</span> 
+                    <a class="tab-category" onclick="ShowCategory('Game')">Game</a><span>|</span> 
+                    <a class="tab-category" onclick="ShowCategory('Software')">Software</a>
+                </div>
+            </div>
             <!-- Portfolio Grid Items-->
             <div class="row justify-content-left card-deck">
                 <!-- Portfolio Item 7-->
                 <div class="col-md-6 col-lg-4 mb-5 d-flex align-items-stretch">
-                    <div class="card text-lowercase">
+                    <div class="card text-lowercase" category="game">
                         <img class="card-img-top" src="/images/space-adventure.png" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Space Adventure - Mobile Action Game</h5>
@@ -96,7 +105,7 @@
                 </div>
                 <!-- Portfolio Item 6-->
                 <div class="col-md-6 col-lg-4 mb-5 d-flex align-items-stretch">
-                    <div class="card text-lowercase">
+                    <div class="card text-lowercase" category="game">
                         <img class="card-img-top" src="/images/inside-paradox.png" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Inside Paradox - Platformer Puzzle Game</h5>
@@ -121,7 +130,7 @@
                 </div>
                 <!-- Portfolio Item 5-->
                 <div class="col-md-6 col-lg-4 mb-5 d-flex align-items-stretch">
-                    <div class="card text-lowercase">
+                    <div class="card text-lowercase" category="game software">
                         <img class="card-img-top" src="/images/turkish-backgammon.png" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Turkish Backgammon Game</h5>
@@ -144,7 +153,7 @@
                 </div>
                 <!-- Portfolio Item 4-->
                 <div class="col-md-6 col-lg-4 mb-5 d-flex align-items-stretch">
-                    <div class="card text-lowercase">
+                    <div class="card text-lowercase" category="software">
                         <img class="card-img-top" src="/images/image-encryption.png" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Image Encryption Project</h5>
@@ -168,12 +177,13 @@
                 </div>
                 <!-- Portfolio Item 3-->
                 <div class="col-md-6 col-lg-4 mb-5 d-flex align-items-stretch">
-                    <div class="card text-lowercase">
+                    <div class="card text-lowercase" category="ai">
                         <img class="card-img-top" src="/images/deep-learning.png" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Vectorized and Non-vectorized Computing Comparison</h5>
                             <p class="card-text">😲 Vectorized computing <b>394x</b> faster than non-vectorized.</p>
                             <div class="card-tag mb-3">
+                                <mark>ai</mark>
                                 <mark>deep learning</mark>
                                 <mark>compare</mark>
                                 <mark>algorithms</mark>
@@ -190,12 +200,13 @@
                 </div>
                 <!-- Portfolio Item 2-->
                 <div class="col-md-6 col-lg-4 mb-5 d-flex align-items-stretch">
-                    <div class="card text-lowercase">
+                    <div class="card text-lowercase" category="ai">
                         <img class="card-img-top" src="/images/deep-learning.png" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Optimization Algorithms Comparison</h5>
                             <p class="card-text">gradient descent, gd with momentum, and adam optimization algorithms comparison on deep learning.</p>
                             <div class="card-tag mb-3">
+                                <mark>ai</mark>
                                 <mark>deep learning</mark>
                                 <mark>compare</mark>
                                 <mark>algorithms</mark>
@@ -212,12 +223,13 @@
                 </div>
                 <!-- Portfolio Item 1-->
                 <div class="col-md-6 col-lg-4 mb-5 d-flex align-items-stretch">
-                    <div class="card text-lowercase">
+                    <div class="card text-lowercase" category="ai">
                         <img class="card-img-top" src="/images/deep-learning.png" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Initialization Methods Comparison</h5>
                             <p class="card-text">Zero, Random, and He initializations comparison on deep learning.</p>
                             <div class="card-tag mb-3">
+                                <mark>ai</mark>
                                 <mark>deep learning</mark>
                                 <mark>compare</mark>
                                 <mark>algorithms</mark>
