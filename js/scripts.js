@@ -2,7 +2,7 @@ var cardElements;
 var tabElements;
 
 window.addEventListener('DOMContentLoaded', event => {
-    cardElements = document.querySelectorAll("#portfolio [category]");
+    loadProjects();
     initTabElements();
 
     // Navbar shrink function
@@ -90,4 +90,60 @@ function showCategoryAll() {
     for(let i=0; i<cardElements.length; i++){
         cardElements[i].parentNode.classList.remove('d-none');
     }
+}
+
+function loadProjects(){
+    // Parent element
+    const portfolioItems = document.getElementById('portfolio-items');
+
+    // Load the portfolio items from the JSON file
+    fetch('/data/projects-data.json')
+        .then(response => response.json())
+        .then(projects => {
+            
+            // Loop through each project and create a project card
+            projects.forEach(project => {
+                let tagElements = '';
+                project.tags.forEach(tag => {
+                    tagElements += `<mark>${tag}</mark> `;
+                });
+
+                let projectPageIcon = '';
+                if (project.page.href.includes('github')){
+                    projectPageIcon = `<i class="fab fa-github fa-fw me-1"></i>github`;
+                }
+                else if (project.page.href.includes('itch.io')){
+                    projectPageIcon = `<i class="fas fa-fw fa-gamepad me-1"></i>itch.io`;
+                }
+
+                const projectCard = `
+<!-- Portfolio Item id:${project.id} -->
+<div class="col-md-6 col-lg-4 mb-5 d-flex align-items-stretch">
+    <div class="card text-lowercase card-container" category="${project.category}">
+        <img class="card-img-top" src="${project.image.src}" alt="${project.image.alt}">
+        <div class="card-body">
+            <h5 class="card-title">${project.title}</h5>
+            <p class="card-text">${project.text}</p>
+            <div class="card-tag mb-3">
+                ${tagElements}
+            </div>
+            <a class="card-page" href="${project.page.href}" target="${project.page.target}">
+                <div class="pt-4 w-100">
+                    <p class="card-muted position-absolute bottom-0 pb-3">
+                        <small class="text-muted">${projectPageIcon}</small>
+                    </p>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+                `;
+                // Append the card to the portfolio deck
+                portfolioItems.insertAdjacentHTML('beforeend', projectCard);
+
+                // get all card elements
+                cardElements = document.querySelectorAll(".card-container");
+            });
+        })
+        .catch(error => console.error(error));
 }

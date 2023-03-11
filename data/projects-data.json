@@ -1,0 +1,102 @@
+[
+    {
+        "id": 7,
+        "category": "game",
+        "image": {"src": "/images/space-adventure.png", "alt": "..."},
+        "title": "Space Adventure - Mobile Action Game",
+        "text": "<b>👾 Unity</b> 2D action game for <b>Android</b>. \"Astro tries to survive in space against time!\" Developed as part of <i>Turkcell Unity</i> trainings. Downloadable for Android via the itch.io link below.</p>",
+        "tags": [
+            "Unity", 
+            "Android", 
+            "2D", 
+            "Game", 
+            "Action"
+        ],
+        "page": {"href": "https://myoluk.itch.io/space-adventure", "target": "_blank"}
+    },
+    {
+        "id": 6,
+        "category": "game",
+        "image": {"src": "/images/inside-paradox.png", "alt": "..."},
+        "title": "Inside Paradox - Platformer Puzzle Game",
+        "text": "🎮 <b>Unity</b> 2D platformer game, a character who tries to discover himself before exploring the world. Developed for <b>Google Game and App Academy</b>.<i>-Playable via the browser with the itch.io link below-</i>",
+        "tags": [
+            "Unity",
+            "2d",
+            "game",
+            "platformer",
+            "puzzle"
+        ],
+        "page": {"href": "https://myoluk.itch.io/inside-paradox", "target": "_blank"}
+    },
+    {
+        "id": 5,
+        "category": "game software",
+        "image": {"src": "/images/turkish-backgammon.png", "alt": "..."},
+        "title": "Turkish Backgammon Game",
+        "text": "🎲 Turkish backgammon (türk tavlası) game developed with <b>JavaScript</b>. Allows offline 2 player.",
+        "tags": [
+            "game",
+            "backgammon",
+            "turkish",
+            "javascript"
+        ],
+        "page": {"href": "https://github.com/myoluk/turkish-backgammon", "target": "_blank"}
+    },
+    {
+        "id": 4,
+        "category": "software",
+        "image": {"src": "/images/image-encryption.png", "alt": "..."},
+        "title": "Image Encryption Project",
+        "text": "Image Encryption/Decryption <b>C#</b> project. The algorithm developed by me.",
+        "tags": [
+            "image",
+            "encryption",
+            "decryption",
+            "csharp",
+            "project"
+        ],
+        "page": {"href": "https://github.com/myoluk/image-encryption", "target": "_blank"}
+    },
+    {
+        "id": 3,
+        "category": "ai",
+        "image": {"src": "/images/deep-learning.png", "alt": "..."},
+        "title": "Vectorized and Non-vectorized Computing Comparison",
+        "text": "😲 Vectorized computing <b>394x</b> faster than non-vectorized.",
+        "tags": [
+            "deep learning",
+            "compare",
+            "algorithms"
+        ],
+        "page": {"href": "https://github.com/myoluk/deeplearning-vectorization-comparison", "target": "_blank"}
+    },
+    {
+        "id": 2,
+        "category": "ai",
+        "image": {"src": "/images/deep-learning.png", "alt": "..."},
+        "title": "Optimization Algorithms Comparison",
+        "text": "Gradient descent, gd with momentum, and adam optimization algorithms comparison on deep learning.",
+        "tags": [
+            "deep learning",
+            "compare",
+            "optimization",
+            "algorithms"
+        ],
+        "page": {"href": "https://github.com/myoluk/deeplearning-optimization-algorithms-comparison", "target": "_blank"}
+    },
+    {
+        "id": 1,
+        "category": "ai",
+        "image": {"src": "/images/deep-learning.png", "alt": "..."},
+        "title": "Initialization Methods Comparison",
+        "text": "Zero, Random, and He initializations comparison on deep learning.",
+        "tags": [
+            "deep learning",
+            "compare",
+            "initialization",
+            "algorithms"
+        ],
+        "page": {"href": "https://github.com/myoluk/deeplearning-initialization-methods-comparison", "target": "_blank"}
+    }
+]
