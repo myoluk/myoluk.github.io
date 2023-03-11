@@ -1,7 +1,9 @@
 var cardElements;
+var tabElements;
 
 window.addEventListener('DOMContentLoaded', event => {
     cardElements = document.querySelectorAll("#portfolio [category]");
+    initTabElements();
 
     // Navbar shrink function
     var navbarShrink = function () {
@@ -47,21 +49,44 @@ window.addEventListener('DOMContentLoaded', event => {
 
 });
 
-function ShowCategory(category) {
-    ShowCategoryAll();
+function initTabElements(){
+    tabElements = document.querySelectorAll(".tab-category");
+    tabElements[0].style.textDecoration = 'none';
+    tabElements[0].style.color = '#2C3E50';
+}
+
+function modifySelected(category) {
+    for (let i=0; i<tabElements.length; i++){
+        let tabElement = tabElements[i];
+        if (tabElement.getAttribute('name').toLowerCase() == category){
+            tabElement.style.textDecoration = 'none';
+            tabElement.style.color = '#2C3E50';
+        }
+        else {
+            tabElement.style.textDecoration = 'underline';
+            tabElement.style.color = '#1abc9c';
+        }
+    }
+}
+
+function showCategory(category) {
     category = category.toLowerCase();
+    modifySelected(category);
+    if (category == 'all'){
+        showCategoryAll();
+        return;
+    }
     for(let i=0; i<cardElements.length; i++){
-        if (cardElements[i].getAttribute('category') == category){
+        if (cardElements[i].getAttribute('category').includes(category)){
             cardElements[i].parentNode.classList.remove('d-none');
         }
         else {
             cardElements[i].parentNode.classList.add('d-none');
         }
     }
-
 }
 
-function ShowCategoryAll() {
+function showCategoryAll() {
     for(let i=0; i<cardElements.length; i++){
         cardElements[i].parentNode.classList.remove('d-none');
     }

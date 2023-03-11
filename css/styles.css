@@ -4526,9 +4526,6 @@ textarea.form-control-lg {
   cursor: pointer;
   text-decoration: underline;
 }
-.tab-category:active, .tab-category:hover {
-  text-decoration: none;
-}
 
 .card {
   position: relative;
