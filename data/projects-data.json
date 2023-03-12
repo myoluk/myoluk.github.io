@@ -4,7 +4,7 @@
         "category": "game",
         "image": {"src": "/images/space-adventure.png", "alt": "..."},
         "title": "Space Adventure - Mobile Action Game",
-        "text": "<b>👾 Unity</b> 2D action game for <b>Android</b>. \"Astro tries to survive in space against time!\" Developed as part of <i>Turkcell Unity</i> trainings. Downloadable for Android via the itch.io link below.</p>",
+        "text": "<b>👾 Unity</b> 2D action game for <b>Android</b>. Developed as part of <i>Turkcell Unity</i> trainings.</p>",
         "tags": [
             "Unity", 
             "Android", 
@@ -19,7 +19,7 @@
         "category": "game",
         "image": {"src": "/images/inside-paradox.png", "alt": "..."},
         "title": "Inside Paradox - Platformer Puzzle Game",
-        "text": "🎮 <b>Unity</b> 2D platformer game, a character who tries to discover himself before exploring the world. Developed for <b>Google Game and App Academy</b>.<i>-Playable via the browser with the itch.io link below-</i>",
+        "text": "🎮 <b>Unity</b> platformer/puzzle game for Windows and WebGL. Developed for <b>Google Game and App Academy</b>.",
         "tags": [
             "Unity",
             "2d",
