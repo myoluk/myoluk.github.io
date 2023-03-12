@@ -1,5 +1,20 @@
 [
     {
+        "id": 8,
+        "category": "ai software",
+        "image": {"src": "/images/default.png", "alt": "..."},
+        "title": "Virtual Paint",
+        "text": "Virtual painting via webcam project developed with <b>Python</b> and <b>OpenCV</b> which is image processing library.",
+        "tags": [
+            "python",
+            "object-tracking",
+            "paint",
+            "image-processing",
+            "opencv"
+        ],
+        "page": {"href": "https://github.com/myoluk/virtual-paint", "target": "_blank"}
+    },
+    {
         "id": 7,
         "category": "game",
         "image": {"src": "/images/inside-paradox.gif", "alt": "..."},
