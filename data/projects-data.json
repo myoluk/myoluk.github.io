@@ -2,21 +2,6 @@
     {
         "id": 7,
         "category": "game",
-        "image": {"src": "/images/space-adventure.png", "alt": "..."},
-        "title": "Space Adventure - Mobile Action Game",
-        "text": "<b>👾 Unity</b> 2D action game for <b>Android</b>. Developed as part of <i>Turkcell Unity</i> trainings.</p>",
-        "tags": [
-            "Unity", 
-            "Android", 
-            "2D", 
-            "Game", 
-            "Action"
-        ],
-        "page": {"href": "https://myoluk.itch.io/space-adventure", "target": "_blank"}
-    },
-    {
-        "id": 6,
-        "category": "game",
         "image": {"src": "/images/inside-paradox.gif", "alt": "..."},
         "title": "Inside Paradox - Platformer Puzzle Game",
         "text": "🎮 <b>Unity</b> platformer/puzzle game for Windows and WebGL. Developed for <b>Google Game and App Academy</b>.",
@@ -28,6 +13,21 @@
             "puzzle"
         ],
         "page": {"href": "https://myoluk.itch.io/inside-paradox", "target": "_blank"}
+    },
+    {
+        "id": 6,
+        "category": "game",
+        "image": {"src": "/images/space-adventure.png", "alt": "..."},
+        "title": "Space Adventure - Mobile Action Game",
+        "text": "<b>👾 Unity</b> 2D action game for <b>Android</b>. Developed as part of <i>Turkcell Unity</i> trainings.</p>",
+        "tags": [
+            "Unity", 
+            "Android", 
+            "2D", 
+            "Game", 
+            "Action"
+        ],
+        "page": {"href": "https://myoluk.itch.io/space-adventure", "target": "_blank"}
     },
     {
         "id": 5,
