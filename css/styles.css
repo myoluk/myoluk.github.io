@@ -4537,6 +4537,8 @@ textarea.form-control-lg {
   background-clip: border-box;
   border: 0.1rem solid rgba(0, 0, 0, 0.125);
   border-radius: 0.5rem;
+  overflow: hidden;
+  transition: box-shadow 0.2s ease-in-out;
 }
 .card .card-text {
   cursor: text;
@@ -4586,6 +4588,7 @@ textarea.form-control-lg {
 
 .card-title {
   margin-bottom: 0.5rem;
+  cursor: pointer;
 }
 
 .card-subtitle {
@@ -4595,9 +4598,11 @@ textarea.form-control-lg {
 
 .card:hover {
   border-color: #1abc9c;
+  box-shadow: 0 0 10px #ccc;
 }
 .card:hover .card-img-top {
   filter: brightness(100%);
+  /* transform: scale(1.1); */
 }
 .card:hover .text-muted {
   color: #1abc9c !important;
@@ -4661,6 +4666,7 @@ textarea.form-control-lg {
 .card-img-bottom {
   width: 100%;
   filter: brightness(95%);
+  transition: transform 0.3s ease-in-out;
 }
 
 .card-img,
