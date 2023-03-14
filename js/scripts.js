@@ -122,7 +122,9 @@ function loadProjects(){
     <div class="card text-lowercase card-container" category="${project.category}">
         <img class="card-img-top" src="${project.image.src}" alt="${project.image.alt}">
         <div class="card-body">
-            <h5 class="card-title">${project.title}</h5>
+            <h5 class="card-title"> <a class="card-page" href="${project.page.href}" target="${project.page.target}">
+                ${project.title}
+            </a></h5>
             <p class="card-text">${project.text}</p>
             <div class="card-tag mb-3">
                 ${tagElements}
