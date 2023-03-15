@@ -101,6 +101,10 @@ function loadProjects(){
         .then(response => response.json())
         .then(projects => {
             
+            // Sort card items by id list
+            idsToSortBy = [8, 7, 6, 5, 4, 3, 2, 1];
+            projects.sort((a, b) => idsToSortBy.indexOf(a.id) - idsToSortBy.indexOf(b.id));
+
             // Loop through each project and create a project card
             projects.forEach(project => {
                 let tagElements = '';
@@ -126,7 +130,7 @@ function loadProjects(){
                 ${project.title}
             </a></h5>
             <p class="card-text">${project.text}</p>
-            <div class="card-tag mb-3">
+            <div class="card-tag mb-3" title="project.id: ${project.id}">
                 ${tagElements}
             </div>
             <a class="card-page" href="${project.page.href}" target="${project.page.target}">
