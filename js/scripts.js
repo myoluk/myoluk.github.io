@@ -107,6 +107,9 @@ function loadProjects(){
 
             // Loop through each project and create a project card
             projects.forEach(project => {
+                // sort tags
+                // project.tags.sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
+
                 let tagElements = '';
                 project.tags.forEach(tag => {
                     tagElements += `<mark>${tag}</mark> `;
