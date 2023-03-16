@@ -4540,6 +4540,7 @@ textarea.form-control-lg {
   border-radius: 0.5rem;
   overflow: hidden;
   transition: box-shadow 0.2s ease-in-out;
+  box-shadow: 0 0 5px #ccc;
 }
 .card .card-text {
   cursor: text;
@@ -4605,7 +4606,7 @@ textarea.form-control-lg {
 
 .card:hover {
   border-color: var(--bs-teal);
-  box-shadow: 0 0 10px #ccc;
+  box-shadow: 0 0 15px #ccc;
 }
 .card:hover .card-img-top {
   filter: brightness(100%);
