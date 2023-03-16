@@ -17,7 +17,6 @@
   --bs-yellow: #ffc107;
   --bs-green: #198754;
   --bs-teal: #1abc9c;
-  --bs-teal-light: #83d3c3;
   --bs-cyan: #0dcaf0;
   --bs-white: #fff;
   --bs-gray: #6c757d;
@@ -80,14 +79,6 @@ body {
   background-color: var(--bs-body-bg);
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
-
-#masthead-bg {
-  width: 100%;
-  height: 50vh;
-  background: url("/assets/masthead-bg.jpg") top right no-repeat;
-  background-size: cover;
-  position: relative;
 }
 
 hr {
@@ -610,7 +601,7 @@ progress {
   padding: 0.25rem;
   background-color: var(--bs-white);
   border: 0.125rem solid var(--bs-gray-300);
-  border-radius: 0rem; /*oval-corner: 0.5rem*/
+  border-radius: 0.5rem;
   max-width: 100%;
   height: auto;
 }
@@ -2835,7 +2826,7 @@ textarea.form-control-lg {
   font-size: 0.875rem;
   color: var(--bs-white);
   background-color: rgba(25, 135, 84, 0.9);
-  border-radius: 0rem; /*oval-corner: 0.5rem*/
+  border-radius: 0.5rem;
 }
 
 .was-validated :valid ~ .valid-feedback,
@@ -2924,7 +2915,7 @@ textarea.form-control-lg {
   font-size: 0.875rem;
   color: var(--bs-white);
   background-color: rgba(220, 53, 69, 0.9);
-  border-radius: 0rem; /*oval-corner: 0.5rem*/
+  border-radius: 0.5rem;
 }
 
 .was-validated :invalid ~ .invalid-feedback,
@@ -3011,7 +3002,7 @@ textarea.form-control-lg {
   border: 0.125rem solid transparent;
   padding: 0.375rem 0.75rem;
   font-size: 1rem;
-  border-radius: 0rem; /*oval-corner: 0.5rem*/
+  border-radius: 0.5rem;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
@@ -3486,13 +3477,13 @@ textarea.form-control-lg {
 .btn-lg, .btn-group-lg > .btn {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
-  border-radius: 0rem; /*oval-corner: 0.75rem*/
+  border-radius: 0.75rem;
 }
 
 .btn-sm, .btn-group-sm > .btn {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
-  border-radius: 0rem; /*oval-corner: 0.25rem*/
+  border-radius: 0.25rem;
 }
 
 .fade {
@@ -3570,7 +3561,7 @@ textarea.form-control-lg {
   background-color: var(--bs-white);
   background-clip: padding-box;
   border: 0.125rem solid rgba(0, 0, 0, 0.15);
-  border-radius: 0rem; /*oval-corner: 0.5rem*/
+  border-radius: 0.5rem;
 }
 .dropdown-menu[data-bs-popper] {
   top: 100%;
@@ -3997,7 +3988,7 @@ textarea.form-control-lg {
 .nav-pills .nav-link {
   background: none;
   border: 0;
-  border-radius: 0rem; /*oval-corner: 0.5rem*/
+  border-radius: 0.5rem;
 }
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
@@ -4090,8 +4081,8 @@ textarea.form-control-lg {
   font-size: 1.25rem;
   line-height: 1;
   background-color: transparent;
-  border: 0 solid transparent; /*oval-corner: 0.125rem*/
-  border-radius: 0rem; /*oval-corner: 0.5rem*/
+  border: 0.125rem solid transparent;
+  border-radius: 0.5rem;
   transition: box-shadow 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
@@ -4546,10 +4537,9 @@ textarea.form-control-lg {
   background-color: var(--bs-white);
   background-clip: border-box;
   border: 0.1rem solid rgba(0, 0, 0, 0.125);
-  border-radius: 0rem; /*oval-corner: 0.5rem*/
+  border-radius: 0.5rem;
   overflow: hidden;
   transition: box-shadow 0.2s ease-in-out;
-  box-shadow: 0 0 5px #ccc;
 }
 .card .card-text {
   cursor: text;
@@ -4563,10 +4553,10 @@ textarea.form-control-lg {
   cursor: default;
 }
 .card .card-tag mark{
-  background-color: var(--bs-teal-light);
+  background-color: var(--bs-teal);
   color: var(--bs-white);
   padding: 0.3em;
-  border-radius: 0rem; /*oval-corner: 0.375rem*/
+  border-radius: 0.5em;
   font-size: 0.7em;
 }
 .card > hr {
@@ -4615,7 +4605,7 @@ textarea.form-control-lg {
 
 .card:hover {
   border-color: var(--bs-teal);
-  box-shadow: 0 0 15px #ccc;
+  box-shadow: 0 0 10px #ccc;
 }
 .card:hover .card-img-top {
   filter: brightness(100%);
@@ -4644,7 +4634,7 @@ textarea.form-control-lg {
   border-bottom: 0.125rem solid rgba(0, 0, 0, 0.125);
 }
 .card-header:first-child {
-  border-radius: 0.375rem 0.375rem 0 0; /*oval-corner: 0.375rem 0.375rem 0 0*/
+  border-radius: 0.375rem 0.375rem 0 0;
 }
 
 .card-footer {
@@ -4653,7 +4643,7 @@ textarea.form-control-lg {
   border-top: 0.125rem solid rgba(0, 0, 0, 0.125);
 }
 .card-footer:last-child {
-  border-radius: 0 0 0rem 0rem; /*oval-corner: 0 0 0.375rem 0.375rem*/
+  border-radius: 0 0 0.375rem 0.375rem;
 }
 
 .card-header-tabs {
@@ -4675,7 +4665,7 @@ textarea.form-control-lg {
   bottom: 0;
   left: 0;
   padding: 1rem;
-  border-radius: 0rem; /*oval-corner: 0.375rem*/
+  border-radius: 0.375rem;
 }
 
 .card-img,
@@ -4688,8 +4678,8 @@ textarea.form-control-lg {
 
 .card-img,
 .card-img-top {
-  border-bottom-left-radius: 0.375rem; /*oval-corner-top: 0.375rem*/
-  border-bottom-right-radius: 0.375rem; /*oval-corner-top: 0.375rem*/
+  border-top-left-radius: 0.375rem;
+  border-top-right-radius: 0.375rem;
 }
 
 .card-img,
