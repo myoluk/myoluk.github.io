@@ -6,11 +6,11 @@
         "title": "Virtual Paint",
         "text": "✏️ Virtual painting via webcam project developed with <b>Python</b> and <b>OpenCV</b> which is image processing library.",
         "tags": [
-            "python",
-            "object-tracking",
-            "paint",
-            "image-processing",
-            "opencv"
+            "Python",
+            "Object Tracking",
+            "Paint",
+            "Image Processing",
+            "OpenCV"
         ],
         "page": {"href": "https://github.com/myoluk/virtual-paint", "target": "_blank"}
     },
@@ -23,9 +23,9 @@
         "tags": [
             "Unity",
             "2d",
-            "game",
-            "platformer",
-            "puzzle"
+            "Game",
+            "Platformer",
+            "Puzzle"
         ],
         "page": {"href": "https://myoluk.itch.io/inside-paradox", "target": "_blank"}
     },
@@ -34,7 +34,7 @@
         "category": "game",
         "image": {"src": "/images/space-adventure.png", "alt": "..."},
         "title": "Space Adventure - Mobile Action Game",
-        "text": "<b>👾 Unity</b> 2D action game for <b>Android</b>. Developed as part of <i>Turkcell Unity</i> trainings.</p>",
+        "text": "<b>👾 Unity</b> 2D action game for <b>Android</b>. Developed as part of <b>Turkcell Unity</b> trainings.</p>",
         "tags": [
             "Unity", 
             "Android", 
@@ -51,10 +51,10 @@
         "title": "Turkish Backgammon Game",
         "text": "🎲 Turkish backgammon (türk tavlası) game developed with <b>JavaScript</b>. Allows offline 2 player.",
         "tags": [
-            "game",
-            "backgammon",
-            "turkish",
-            "javascript"
+            "Game",
+            "Backgammon",
+            "Turkish",
+            "Javascript"
         ],
         "page": {"href": "https://github.com/myoluk/turkish-backgammon", "target": "_blank"}
     },
@@ -65,11 +65,12 @@
         "title": "Image Encryption Project",
         "text": "Image Encryption/Decryption <b>C#</b> project. The algorithm developed by me.",
         "tags": [
-            "image",
-            "encryption",
-            "decryption",
-            "csharp",
-            "project"
+            "Cryptology",
+            "Image",
+            "Encryption",
+            "Decryption",
+            "Csharp",
+            "Project"
         ],
         "page": {"href": "https://github.com/myoluk/image-encryption", "target": "_blank"}
     },
@@ -80,9 +81,9 @@
         "title": "Vectorized and Non-vectorized Computing Comparison",
         "text": "😲 Vectorized computing <b>394x</b> faster than non-vectorized.",
         "tags": [
-            "deep learning",
-            "compare",
-            "algorithms"
+            "Deep Learning",
+            "Compare",
+            "Algorithms"
         ],
         "page": {"href": "https://github.com/myoluk/deeplearning-vectorization-comparison", "target": "_blank"}
     },
@@ -93,10 +94,10 @@
         "title": "Optimization Algorithms Comparison",
         "text": "Gradient descent, gd with momentum, and adam optimization algorithms comparison on deep learning.",
         "tags": [
-            "deep learning",
-            "compare",
-            "optimization",
-            "algorithms"
+            "Deep Learning",
+            "Compare",
+            "Optimization",
+            "Algorithms"
         ],
         "page": {"href": "https://github.com/myoluk/deeplearning-optimization-algorithms-comparison", "target": "_blank"}
     },
@@ -107,10 +108,10 @@
         "title": "Initialization Methods Comparison",
         "text": "Zero, Random, and He initializations comparison on deep learning.",
         "tags": [
-            "deep learning",
-            "compare",
-            "initialization",
-            "algorithms"
+            "Deep learning",
+            "Compare",
+            "Initialization",
+            "Algorithms"
         ],
         "page": {"href": "https://github.com/myoluk/deeplearning-initialization-methods-comparison", "target": "_blank"}
     }

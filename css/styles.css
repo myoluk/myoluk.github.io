@@ -7756,7 +7756,7 @@ textarea.form-control-lg {
 }
 
 .text-lowercase {
-  text-transform: lowercase !important;
+  /* text-transform: lowercase !important; */
 }
 
 .text-uppercase {
