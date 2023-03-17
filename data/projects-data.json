@@ -77,7 +77,7 @@
     {
         "id": 3,
         "category": "ai",
-        "image": {"src": "/images/deep-learning.png", "alt": "..."},
+        "image": {"src": "/images/default-code.png", "alt": "..."},
         "title": "Vectorized and Non-vectorized Computing Comparison",
         "text": "😲 Vectorized computing <b>394x</b> faster than non-vectorized.",
         "tags": [
@@ -90,7 +90,7 @@
     {
         "id": 2,
         "category": "ai",
-        "image": {"src": "/images/deep-learning.png", "alt": "..."},
+        "image": {"src": "/images/default-dots.png", "alt": "..."},
         "title": "Optimization Algorithms Comparison",
         "text": "Gradient descent, gd with momentum, and adam optimization algorithms comparison on deep learning.",
         "tags": [
@@ -104,7 +104,7 @@
     {
         "id": 1,
         "category": "ai",
-        "image": {"src": "/images/deep-learning.png", "alt": "..."},
+        "image": {"src": "/images/default-dots.png", "alt": "..."},
         "title": "Initialization Methods Comparison",
         "text": "Zero, Random, and He initializations comparison on deep learning.",
         "tags": [
