@@ -32,7 +32,7 @@
     {
         "id": 6,
         "category": "game",
-        "image": {"src": "/images/space-adventure.png", "alt": "..."},
+        "image": {"src": "/images/space-adventure.gif", "alt": "..."},
         "title": "Space Adventure - Mobile Action Game",
         "text": "<b>👾 Unity</b> 2D action game for <b>Android</b>. Developed as part of <b>Turkcell Unity</b> trainings.</p>",
         "tags": [
