@@ -20,6 +20,7 @@
   --bs-green: #198754;
   --bs-teal: #1abc9c;
   --bs-teal-light: #7eccbc;
+  --bs-teal-dark: #15967d;
   --bs-cyan: #0dcaf0;
   --bs-white: #fff;
   --bs-gray: #6c757d;
@@ -3944,6 +3945,7 @@ textarea.form-control-lg {
   color: var(--bs-teal);
   text-decoration: none;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+  font-weight: 600;
 }
 @media (prefers-reduced-motion: reduce) {
   .nav-link {
@@ -3951,7 +3953,7 @@ textarea.form-control-lg {
   }
 }
 .nav-link:hover, .nav-link:focus {
-  color: #15967d;
+  color: var(--bs-teal-dark);
 }
 .nav-link.disabled {
   color: var(--bs-gray);
@@ -4052,6 +4054,7 @@ textarea.form-control-lg {
   padding-bottom: 0.3125rem;
   margin-right: 1rem;
   font-size: 1.25rem;
+  font-weight: 600;
   text-decoration: none;
   white-space: nowrap;
 }
