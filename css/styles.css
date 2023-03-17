@@ -4682,7 +4682,7 @@ textarea.form-control-lg {
 .card-img-top,
 .card-img-bottom {
   width: 100%;
-  filter: brightness(95%);
+  filter: brightness(98%);
   transition: transform 0.3s ease-in-out;
 }
 
