@@ -126,7 +126,7 @@ function loadProjects(){
                 const projectCard = `
 <!-- Portfolio Item id:${project.id} -->
 <div class="col-md-6 col-lg-4 mb-5 d-flex align-items-stretch">
-    <div class="card text-lowercase card-container" category="${project.category}">
+    <div class="card card-container" category="${project.category}">
         <img class="card-img-top" src="${project.image.src}" alt="${project.image.alt}">
         <div class="card-body">
             <h5 class="card-title"> <a class="card-page" href="${project.page.href}" target="${project.page.target}">
