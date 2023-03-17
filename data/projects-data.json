@@ -12,7 +12,7 @@
             "Image Processing",
             "OpenCV"
         ],
-        "page": {"href": "https://github.com/myoluk/virtual-paint", "target": "_blank"}
+        "page": {"href": "https://github.com/myoluk/virtual-paint", "target": ""}
     },
     {
         "id": 7,
@@ -27,7 +27,7 @@
             "Platformer",
             "Puzzle"
         ],
-        "page": {"href": "https://myoluk.itch.io/inside-paradox", "target": "_blank"}
+        "page": {"href": "https://myoluk.itch.io/inside-paradox", "target": ""}
     },
     {
         "id": 6,
@@ -42,7 +42,7 @@
             "Game", 
             "Action"
         ],
-        "page": {"href": "https://myoluk.itch.io/space-adventure", "target": "_blank"}
+        "page": {"href": "https://myoluk.itch.io/space-adventure", "target": ""}
     },
     {
         "id": 5,
@@ -56,7 +56,7 @@
             "Turkish",
             "Javascript"
         ],
-        "page": {"href": "https://github.com/myoluk/turkish-backgammon", "target": "_blank"}
+        "page": {"href": "https://github.com/myoluk/turkish-backgammon", "target": ""}
     },
     {
         "id": 4,
@@ -72,7 +72,7 @@
             "C-Sharp",
             "Project"
         ],
-        "page": {"href": "https://github.com/myoluk/image-encryption", "target": "_blank"}
+        "page": {"href": "https://github.com/myoluk/image-encryption", "target": ""}
     },
     {
         "id": 3,
@@ -85,7 +85,7 @@
             "Compare",
             "Algorithms"
         ],
-        "page": {"href": "https://github.com/myoluk/deeplearning-vectorization-comparison", "target": "_blank"}
+        "page": {"href": "https://github.com/myoluk/deeplearning-vectorization-comparison", "target": ""}
     },
     {
         "id": 2,
@@ -99,7 +99,7 @@
             "Optimization",
             "Algorithms"
         ],
-        "page": {"href": "https://github.com/myoluk/deeplearning-optimization-algorithms-comparison", "target": "_blank"}
+        "page": {"href": "https://github.com/myoluk/deeplearning-optimization-algorithms-comparison", "target": ""}
     },
     {
         "id": 1,
@@ -113,6 +113,6 @@
             "Initialization",
             "Algorithms"
         ],
-        "page": {"href": "https://github.com/myoluk/deeplearning-initialization-methods-comparison", "target": "_blank"}
+        "page": {"href": "https://github.com/myoluk/deeplearning-initialization-methods-comparison", "target": ""}
     }
 ]
