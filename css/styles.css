@@ -4613,6 +4613,7 @@ textarea.form-control-lg {
   filter: brightness(100%);
   /* transform: scale(1.1); */
 }
+.card:hover .card-title a,
 .card:hover .text-muted {
   color: var(--bs-teal) !important;
 }
