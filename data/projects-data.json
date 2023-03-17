@@ -2,7 +2,7 @@
     {
         "id": 8,
         "category": "ai software",
-        "image": {"src": "/images/virtual-paint.png", "alt": "..."},
+        "image": {"src": "/images/virtual-paint.gif", "alt": "..."},
         "title": "Virtual Paint",
         "text": "✏️ Virtual painting via webcam project developed with <b>Python</b> and <b>OpenCV</b> which is image processing library.",
         "tags": [
