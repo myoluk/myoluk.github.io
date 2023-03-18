@@ -132,7 +132,7 @@ function loadProjects(){
             <h5 class="card-title"> <a class="card-page" href="${project.page.href}" target="${project.page.target}">
                 ${project.title}
             </a></h5>
-            <p class="card-text">${project.text}</p>
+            <p class="card-text text-secondary">${project.text}</p>
             <div class="card-tag mb-3" title="project.id: ${project.id}">
                 ${tagElements}
             </div>
