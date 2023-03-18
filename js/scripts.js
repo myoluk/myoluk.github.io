@@ -114,7 +114,7 @@ function loadProjects(){
                 projectImageSource = '';
                 if (project.image.src.includes(".mp4")){
                     projectImageSource = `
-        <video class="card-img-top" width="100%" autoplay loop>
+        <video class="card-img-top" width="100%" autoplay loop muted>
             <source src="${project.image.src}" type="video/mp4">
             ${project.image.alt}
         </video>
