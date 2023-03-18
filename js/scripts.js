@@ -125,20 +125,22 @@ function loadProjects(){
 
                 // video source
                 projectImageSource = '';
-                projectVideoName = '';
                 if (project.image.src.includes(".mp4")){
                     projectVideoName = project.image.src.substring(
                         project.image.src.lastIndexOf("/") + 1,
                         project.image.src.lastIndexOf("."));
+                    projectPosterSrc = project.image.src.replace(".mp4", ".png");
                     projectImageSource = `
     <div class="card card-container" category="${project.category}" onmouseover="playVideo('${projectVideoName}')" onmouseout="pauseVideo('${projectVideoName}')">
-        <video id="${projectVideoName}" class="card-img-top" width="100%" loop muted>
+        <video id="${projectVideoName}" class="card-img-top" width="100%" poster="${projectPosterSrc}" loop muted>
             <source src="${project.image.src}" type="video/mp4">
             ${project.image.alt}
         </video>
         <div id="pb-${projectVideoName}" class="play-button"><i class="fa fa-play"></i></div>
                     `;
                 }
+    
+                // image source
                 else {
                     projectImageSource = `
     <div class="card card-container" category="${project.category}">
