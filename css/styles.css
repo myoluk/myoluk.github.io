@@ -2992,6 +2992,18 @@ textarea.form-control-lg {
   z-index: 3;
 }
 
+.play-button {
+  position: absolute;
+  top: 5%;
+  right: 0%;
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  font-size: 32px;
+  cursor: pointer;
+}
+
 .btn {
   display: inline-block;
   font-weight: 400;

@@ -92,6 +92,19 @@ function showCategoryAll() {
     }
 }
 
+function playVideo(videoName){
+    var video = document.getElementById(videoName);
+    var playButton = document.getElementById('pb-' + videoName);
+    video.play();
+    playButton.innerHTML = "";
+}
+function pauseVideo(videoName){
+    var video = document.getElementById(videoName);
+    var playButton = document.getElementById('pb-' + videoName);
+    video.pause();
+    playButton.innerHTML = "<i class='fa fa-play'></i>";
+}
+
 function loadProjects(){
     // Parent element
     const portfolioItems = document.getElementById('portfolio-items');
@@ -112,16 +125,23 @@ function loadProjects(){
 
                 // video source
                 projectImageSource = '';
+                projectVideoName = '';
                 if (project.image.src.includes(".mp4")){
+                    projectVideoName = project.image.src.substring(
+                        project.image.src.lastIndexOf("/") + 1,
+                        project.image.src.lastIndexOf("."));
                     projectImageSource = `
-        <video class="card-img-top" width="100%" autoplay loop muted>
+    <div class="card card-container" category="${project.category}" onmouseover="playVideo('${projectVideoName}')" onmouseout="pauseVideo('${projectVideoName}')">
+        <video id="${projectVideoName}" class="card-img-top" width="100%" loop muted>
             <source src="${project.image.src}" type="video/mp4">
             ${project.image.alt}
         </video>
+        <div id="pb-${projectVideoName}" class="play-button"><i class="fa fa-play"></i></div>
                     `;
                 }
                 else {
                     projectImageSource = `
+    <div class="card card-container" category="${project.category}">
         <img class="card-img-top" src="${project.image.src}" alt="${project.image.alt}">            
                     `;
                 }
@@ -142,8 +162,7 @@ function loadProjects(){
                 const projectCard = `
 <!-- Portfolio Item id:${project.id} -->
 <div class="col-md-6 col-lg-4 mb-5 d-flex align-items-stretch">
-    <div class="card card-container" category="${project.category}">
-        ${projectImageSource}
+    ${projectImageSource}
         <div class="card-body">
             <h5 class="card-title"> <a class="card-page" href="${project.page.href}" target="${project.page.target}">
                 ${project.title}
