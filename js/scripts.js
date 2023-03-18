@@ -110,6 +110,22 @@ function loadProjects(){
                 // sort tags
                 // project.tags.sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
 
+                // video source
+                projectImageSource = '';
+                if (project.image.src.includes(".mp4")){
+                    projectImageSource = `
+        <video class="card-img-top" width="100%" autoplay loop>
+            <source src="${project.image.src}" type="video/mp4">
+            ${project.image.alt}
+        </video>
+                    `;
+                }
+                else {
+                    projectImageSource = `
+        <img class="card-img-top" src="${project.image.src}" alt="${project.image.alt}">            
+                    `;
+                }
+
                 let tagElements = '';
                 project.tags.forEach(tag => {
                     tagElements += `<mark>${tag}</mark> `;
@@ -127,7 +143,7 @@ function loadProjects(){
 <!-- Portfolio Item id:${project.id} -->
 <div class="col-md-6 col-lg-4 mb-5 d-flex align-items-stretch">
     <div class="card card-container" category="${project.category}">
-        <img class="card-img-top" src="${project.image.src}" alt="${project.image.alt}">
+        ${projectImageSource}
         <div class="card-body">
             <h5 class="card-title"> <a class="card-page" href="${project.page.href}" target="${project.page.target}">
                 ${project.title}

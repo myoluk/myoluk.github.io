@@ -4618,7 +4618,7 @@ textarea.form-control-lg {
   box-shadow: 0 0 15px #ccc;
 }
 .card:hover .card-img-top {
-  filter: brightness(100%);
+  filter: brightness(105%);
   /* transform: scale(1.1); */
 }
 .card:hover .card-title a,
