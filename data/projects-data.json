@@ -78,7 +78,7 @@
         "id": 3,
         "category": "ai",
         "image": {"src": "/images/default-code.png", "alt": "..."},
-        "title": "Vectorized and Non-vectorized Computing Comparison",
+        "title": "Vectorized Computing Comparison",
         "text": "😲 Vectorized computing <b>394x</b> faster than non-vectorized.",
         "tags": [
             "Deep Learning",
@@ -92,7 +92,7 @@
         "category": "ai",
         "image": {"src": "/images/default-dots.png", "alt": "..."},
         "title": "Optimization Algorithms Comparison",
-        "text": "Gradient descent, gd with momentum, and adam optimization algorithms comparison on deep learning.",
+        "text": "Gradient Descent, GD with Momentum, and Adam optimization algorithms comparison on deep learning.",
         "tags": [
             "Deep Learning",
             "Compare",
