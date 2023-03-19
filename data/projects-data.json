@@ -2,7 +2,7 @@
     {
         "id": 9,
         "category": "game",
-        "image": {"src": "/images/default-dots.png", "alt": "..."},
+        "image": {"src": "/images/coin-claim.png", "alt": "..."},
         "title": "Coin Claim Mechanism",
         "text": "<b>Unity</b> reward coins claimer <b>Script</b> without using Animator.",
         "tags": [
