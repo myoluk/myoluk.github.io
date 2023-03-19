@@ -1,5 +1,20 @@
 [
     {
+        "id": 9,
+        "category": "game",
+        "image": {"src": "/images/default-dots.png", "alt": "..."},
+        "title": "Coin Claim Mechanism",
+        "text": "<b>Unity</b> reward coins claimer <b>Script</b> without using Animator.",
+        "tags": [
+            "Unity",
+            "Script",
+            "Coin",
+            "Claim",
+            "Mechanism"
+        ],
+        "page": {"href": "https://github.com/myoluk/", "target": ""}
+    },
+    {
         "id": 8,
         "category": "ai software",
         "image": {"src": "/images/virtual-paint.mp4", "alt": "..."},
