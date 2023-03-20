@@ -1,5 +1,6 @@
 var cardElements;
 var tabElements;
+var videoNames = [];
 
 window.addEventListener('DOMContentLoaded', event => {
     loadProjects();
@@ -105,6 +106,25 @@ function pauseVideo(videoName){
     playButton.innerHTML = "<i class='fa fa-play'></i>";
 }
 
+function playPauseVideo(videoName){
+    for (let i = 0; i < videoNames.length; i++){
+        if (videoNames[i][0] == videoName){
+            if (videoNames[i][1]){
+                pauseVideo(videoName);
+                videoNames[i][1] = false;
+            }
+            else {
+                playVideo(videoName);
+                videoNames[i][1] = true;
+            }
+        }
+        else {
+            pauseVideo(videoNames[i][0]);
+            videoNames[i][1] = false;
+        }
+    }
+}
+
 function loadProjects(){
     // Parent element
     const portfolioItems = document.getElementById('portfolio-items');
@@ -131,13 +151,15 @@ function loadProjects(){
                         project.image.src.lastIndexOf("."));
                     projectPosterSrc = project.image.src.replace(".mp4", ".png");
                     projectImageSource = `
-    <div class="card card-container" category="${project.category}" onmouseover="playVideo('${projectVideoName}')" onmouseout="pauseVideo('${projectVideoName}')">
-        <video id="${projectVideoName}" class="card-img-top" width="100%" poster="${projectPosterSrc}" loop>
+    <div class="card card-container" category="${project.category}">
+        <video id="${projectVideoName}" class="card-img-top" width="100%" poster="${projectPosterSrc}" onclick="playPauseVideo('${projectVideoName}')" loop>
             <source src="${project.image.src}" type="video/mp4">
             ${project.image.alt}
         </video>
         <div id="pb-${projectVideoName}" class="play-button"><i class="fa fa-play"></i></div>
                     `;
+
+                    videoNames.push([projectVideoName, false]);
                 }
     
                 // image source
