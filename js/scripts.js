@@ -132,7 +132,7 @@ function loadProjects(){
                     projectPosterSrc = project.image.src.replace(".mp4", ".png");
                     projectImageSource = `
     <div class="card card-container" category="${project.category}" onmouseover="playVideo('${projectVideoName}')" onmouseout="pauseVideo('${projectVideoName}')">
-        <video id="${projectVideoName}" class="card-img-top" width="100%" poster="${projectPosterSrc}" loop muted>
+        <video id="${projectVideoName}" class="card-img-top" width="100%" poster="${projectPosterSrc}" loop>
             <source src="${project.image.src}" type="video/mp4">
             ${project.image.alt}
         </video>
