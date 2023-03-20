@@ -3,8 +3,8 @@
         "id": 9,
         "category": "game",
         "image": {"src": "/images/coins-claim.mp4", "alt": "..."},
-        "title": "Coins Claim Smoothly Script",
-        "text": "<b>Unity</b> reward coins smoothly claim script without using Animator.",
+        "title": "Coins Claim Smoothly",
+        "text": "<b>Unity</b> reward coins smoothly claim <b>script</b> without using Animator.",
         "tags": [
             "Unity",
             "Script",
