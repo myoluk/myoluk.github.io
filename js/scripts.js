@@ -1,6 +1,6 @@
 var cardElements;
 var tabElements;
-var videoNames = [];
+var videoNames = {};
 
 window.addEventListener('DOMContentLoaded', event => {
     loadProjects();
@@ -107,20 +107,24 @@ function pauseVideo(videoName){
 }
 
 function playPauseVideo(videoName){
-    for (let i = 0; i < videoNames.length; i++){
-        if (videoNames[i][0] == videoName){
-            if (videoNames[i][1]){
-                pauseVideo(videoName);
-                videoNames[i][1] = false;
+    for (let video in videoNames){
+        // if video name matchs
+        if (video == videoName){
+            // if video is playing pause it
+            if (videoNames[video]){
+                pauseVideo(video);
+                videoNames[video] = false;
             }
+            // if video is not playing play it
             else {
-                playVideo(videoName);
-                videoNames[i][1] = true;
+                playVideo(video);
+                videoNames[video] = true;
             }
         }
+        // if video name not match
         else {
-            pauseVideo(videoNames[i][0]);
-            videoNames[i][1] = false;
+            pauseVideo(video);
+            videoNames[video] = false;
         }
     }
 }
@@ -135,18 +139,18 @@ function loadProjects(){
         .then(projects => {
             
             // Sort card items by id list
-            idsToSortBy = [9, 8, 7, 6, 5, 4, 2, 1, 3];
+            let idsToSortBy = [9, 8, 7, 6, 5, 4, 2, 1, 3];
             projects.sort((a, b) => idsToSortBy.indexOf(a.id) - idsToSortBy.indexOf(b.id));
 
             // Loop through each project and create a project card
             projects.forEach(project => {
-                // sort tags
+                // sort tags by alphabetic
                 // project.tags.sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
 
                 // video source
-                projectImageSource = '';
+                let projectImageSource = '';
                 if (project.image.src.includes(".mp4")){
-                    projectVideoName = project.image.src.substring(
+                    let projectVideoName = project.image.src.substring(
                         project.image.src.lastIndexOf("/") + 1,
                         project.image.src.lastIndexOf("."));
                     projectPosterSrc = project.image.src.replace(".mp4", ".png");
@@ -159,7 +163,7 @@ function loadProjects(){
         <div id="pb-${projectVideoName}" class="play-button"><i class="fa fa-play"></i></div>
                     `;
 
-                    videoNames.push([projectVideoName, false]);
+                    videoNames[projectVideoName] = false;
                 }
     
                 // image source
