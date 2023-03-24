@@ -96,8 +96,9 @@
         "text": "😲 Vectorized computing <b>394x</b> faster than non-vectorized.",
         "tags": [
             "Deep Learning",
-            "Compare",
-            "Algorithms"
+            "Computing",
+            "Algorithms",
+            "Compare"
         ],
         "page": {"href": "https://github.com/myoluk/deeplearning-vectorization-comparison", "target": ""}
     },
