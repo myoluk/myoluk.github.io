@@ -124,9 +124,9 @@
         "text": "Zero, Random, and He initializations comparison on deep learning.",
         "tags": [
             "Deep learning",
-            "Compare",
             "Initialization",
-            "Algorithms"
+            "Algorithms",
+            "Compare"
         ],
         "page": {"href": "https://github.com/myoluk/deeplearning-initialization-methods-comparison", "target": ""}
     }
