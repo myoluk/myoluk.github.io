@@ -110,9 +110,9 @@
         "text": "Gradient Descent, GD with Momentum, and Adam optimization algorithms comparison on deep learning.",
         "tags": [
             "Deep Learning",
-            "Compare",
             "Optimization",
-            "Algorithms"
+            "Algorithms",
+            "Compare"
         ],
         "page": {"href": "https://github.com/myoluk/deeplearning-optimization-algorithms-comparison", "target": ""}
     },
