@@ -1,5 +1,20 @@
 [
     {
+        "id": 10,
+        "category": "software ai",
+        "image": {"src": "/images/default-code.png", "alt": "..."},
+        "title": "University Courses",
+        "text": "Homeworks, projects and works some of my university's courses.",
+        "tags": [
+            "University",
+            "Courses",
+            "Homeworks",
+            "Projects",
+            "Works"
+        ],
+        "page": {"href": "https://github.com/myoluk/", "target": ""}
+    },
+    {
         "id": 9,
         "category": "game",
         "image": {"src": "/images/coins-claim.mp4", "alt": "..."},
