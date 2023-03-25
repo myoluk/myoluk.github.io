@@ -2,7 +2,7 @@
     {
         "id": 10,
         "category": "software ai",
-        "image": {"src": "/images/default-code.png", "alt": "..."},
+        "image": {"src": "/images/university-courses.png", "alt": "..."},
         "title": "University Courses",
         "text": "Homeworks, projects and works some of my university's courses.",
         "tags": [
