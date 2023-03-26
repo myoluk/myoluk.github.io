@@ -155,7 +155,6 @@ function loadProjects(){
                         project.image.src.lastIndexOf("."));
                     projectPosterSrc = project.image.src.replace(".mp4", ".png");
                     projectImageSource = `
-    <div class="card card-container" category="${project.category}">
         <video id="${projectVideoName}" class="card-img-top" width="100%" poster="${projectPosterSrc}" onclick="playPauseVideo('${projectVideoName}')" loop>
             <source src="${project.image.src}" type="video/mp4">
             ${project.image.alt}
@@ -169,7 +168,6 @@ function loadProjects(){
                 // image source
                 else {
                     projectImageSource = `
-    <div class="card card-container" category="${project.category}">
         <img class="card-img-top" src="${project.image.src}" alt="${project.image.alt}">            
                     `;
                 }
@@ -190,7 +188,8 @@ function loadProjects(){
                 const projectCard = `
 <!-- Portfolio Item id:${project.id} -->
 <div class="col-md-6 col-lg-4 mb-5 d-flex align-items-stretch">
-    ${projectImageSource}
+    <div class="card card-container" category="${project.category}">
+        ${projectImageSource}
         <div class="card-body">
             <h5 class="card-title"> <a class="card-page" href="${project.page.href}" target="${project.page.target}">
                 ${project.title}
