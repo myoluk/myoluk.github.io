@@ -1,21 +1,6 @@
 [
     {
         "id": 10,
-        "category": "software ai",
-        "image": {"src": "/images/university-courses.png", "alt": "..."},
-        "title": "University Courses",
-        "text": "Homeworks, projects and works some of my university's courses.",
-        "tags": [
-            "University",
-            "Courses",
-            "Homeworks",
-            "Projects",
-            "Works"
-        ],
-        "page": {"href": "https://github.com/myoluk/university-courses", "target": ""}
-    },
-    {
-        "id": 9,
         "category": "game",
         "image": {"src": "/images/coins-claim.mp4", "alt": "..."},
         "title": "Coins Claim Smoothly",
@@ -30,7 +15,7 @@
         "page": {"href": "https://github.com/myoluk/coins-claim-smoothly-script", "target": ""}
     },
     {
-        "id": 8,
+        "id": 9,
         "category": "ai software",
         "image": {"src": "/images/virtual-paint.mp4", "alt": "..."},
         "title": "Virtual Paint",
@@ -45,7 +30,7 @@
         "page": {"href": "https://github.com/myoluk/virtual-paint", "target": ""}
     },
     {
-        "id": 7,
+        "id": 8,
         "category": "game",
         "image": {"src": "/images/inside-paradox.mp4", "alt": "..."},
         "title": "Inside Paradox - Platformer Puzzle Game",
@@ -60,7 +45,7 @@
         "page": {"href": "https://myoluk.itch.io/inside-paradox", "target": ""}
     },
     {
-        "id": 6,
+        "id": 7,
         "category": "game",
         "image": {"src": "/images/space-adventure.mp4", "alt": "..."},
         "title": "Space Adventure - Mobile Endless Action Game",
@@ -75,7 +60,7 @@
         "page": {"href": "https://myoluk.itch.io/space-adventure", "target": ""}
     },
     {
-        "id": 5,
+        "id": 6,
         "category": "game software",
         "image": {"src": "/images/turkish-backgammon.png", "alt": "..."},
         "title": "Turkish Backgammon JS",
@@ -89,7 +74,7 @@
         "page": {"href": "https://github.com/myoluk/turkish-backgammon", "target": ""}
     },
     {
-        "id": 4,
+        "id": 5,
         "category": "software",
         "image": {"src": "/images/image-encryption.png", "alt": "..."},
         "title": "Image Encryption Project",
@@ -104,21 +89,7 @@
         "page": {"href": "https://github.com/myoluk/image-encryption", "target": ""}
     },
     {
-        "id": 3,
-        "category": "ai",
-        "image": {"src": "/images/default-code.png", "alt": "..."},
-        "title": "Vectorized Computing Comparison",
-        "text": "😲 Vectorized computing <b>394x</b> faster than non-vectorized.",
-        "tags": [
-            "Deep Learning",
-            "Computing",
-            "Algorithms",
-            "Compare"
-        ],
-        "page": {"href": "https://github.com/myoluk/deeplearning-vectorization-comparison", "target": ""}
-    },
-    {
-        "id": 2,
+        "id": 4,
         "category": "ai",
         "image": {"src": "/images/default-dots.png", "alt": "..."},
         "title": "Optimization Algorithms Comparison",
@@ -132,7 +103,7 @@
         "page": {"href": "https://github.com/myoluk/deeplearning-optimization-algorithms-comparison", "target": ""}
     },
     {
-        "id": 1,
+        "id": 3,
         "category": "ai",
         "image": {"src": "/images/default-dots.png", "alt": "..."},
         "title": "Initialization Methods Comparison",
@@ -144,5 +115,34 @@
             "Compare"
         ],
         "page": {"href": "https://github.com/myoluk/deeplearning-initialization-methods-comparison", "target": ""}
-    }
+    },
+    {
+        "id": 2,
+        "category": "ai",
+        "image": {"src": "/images/default-code.png", "alt": "..."},
+        "title": "Vectorized Computing Comparison",
+        "text": "😲 Vectorized computing <b>394x</b> faster than non-vectorized.",
+        "tags": [
+            "Deep Learning",
+            "Computing",
+            "Algorithms",
+            "Compare"
+        ],
+        "page": {"href": "https://github.com/myoluk/deeplearning-vectorization-comparison", "target": ""}
+    },
+    {
+        "id": 1,
+        "category": "software ai",
+        "image": {"src": "/images/university-courses.png", "alt": "..."},
+        "title": "University Courses",
+        "text": "Homeworks, projects and works some of my university's courses.",
+        "tags": [
+            "University",
+            "Courses",
+            "Homeworks",
+            "Projects",
+            "Works"
+        ],
+        "page": {"href": "https://github.com/myoluk/university-courses", "target": ""}
+    },
 ]
