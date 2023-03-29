@@ -5,6 +5,7 @@ var videoNames = {};
 window.addEventListener('DOMContentLoaded', event => {
     loadProjects();
     initTabElements();
+    initMarkdown();
 
     // Navbar shrink function
     var navbarShrink = function () {
@@ -49,6 +50,16 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
 });
+
+function initMarkdown(){
+    var elements = document.querySelectorAll('.markdown');
+    for (let i = 0; i < elements.length; i++){
+        var elementText = elements[i].textContent;
+        var md = new markdownit();
+        var markdownText = md.render(elementText);
+        elements[i].innerHTML = markdownText;
+    }
+}
 
 function initTabElements(){
     tabElements = document.querySelectorAll(".tab-category");
