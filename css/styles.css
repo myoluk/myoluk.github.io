@@ -935,6 +935,7 @@ button:not(:disabled) {
 
 .play-button {
     position: absolute;
+    opacity: 0.8;
     top: 5%;
     right: 0;
     transform: translate(-50%, -50%);
