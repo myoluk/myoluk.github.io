@@ -189,11 +189,14 @@ function loadProjects(){
                 });
 
                 let projectPageIcon = '';
-                if (project.page.href.includes('github')){
+                if (project.page.href.includes('github.com')){
                     projectPageIcon = `<i class="fab fa-github fa-fw me-1"></i>github`;
                 }
                 else if (project.page.href.includes('itch.io')){
                     projectPageIcon = `<i class="fas fa-fw fa-gamepad me-1"></i>itch.io`;
+                }
+                else {
+                    projectPageIcon = `<i class="fas fa-fw fa-link me-1"></i>itch.io`;
                 }
 
                 const projectCard = `
