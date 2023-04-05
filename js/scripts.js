@@ -195,6 +195,9 @@ function loadProjects(){
                 else if (project.page.href.includes('itch.io')){
                     projectPageIcon = `<i class="fas fa-fw fa-gamepad me-1"></i>itch.io`;
                 }
+                else if (project.page.href.includes('youtube.com') || project.page.href.includes('youtu.be')){
+                    projectPageIcon = `<i class="fab fa-youtube fa-fw me-1"></i>github`;
+                }
                 else {
                     projectPageIcon = `<i class="fas fa-fw fa-link me-1"></i>itch.io`;
                 }
