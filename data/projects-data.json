@@ -2,7 +2,7 @@
     {
         "id": 11,
         "category": "software",
-        "image": {"src": "/images/default-code.png", "alt": "..."},
+        "image": {"src": "/images/knock-detect-lock.png", "alt": "..."},
         "title": "Knock Detect Lock",
         "text": "<b>Arduino</b> project that detecs patterns drom knocks and unlocks the box if the pattern is correct.",
         "tags": [
