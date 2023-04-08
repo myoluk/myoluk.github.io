@@ -78,7 +78,7 @@
         "category": "game software",
         "image": {"src": "/images/turkish-backgammon.png", "alt": "..."},
         "title": "Turkish Backgammon JS",
-        "text": "🎲 Turkish backgammon (türk tavlası) game developed with <b>JavaScript</b>. Allows offline 2 player.",
+        "text": "🎲 Turkish backgammon (türk tavlası) game developed with <b>JavaScript</b>. Allows offline 2 players.",
         "tags": [
             "Game",
             "Backgammon",
