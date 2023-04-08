@@ -4,7 +4,7 @@
         "category": "software",
         "image": {"src": "/images/knock-detect-lock.png", "alt": "..."},
         "title": "Knock Detect Lock",
-        "text": "<b>Arduino</b> project that detecs patterns drom knocks and unlocks the box if the pattern is correct.",
+        "text": "<b>Arduino</b> project that detecs pattern from knocks and unlocks the box if the pattern is correct.",
         "tags": [
             "Arduino",
             "Embedded System",
