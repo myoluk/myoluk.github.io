@@ -4,7 +4,7 @@
         "category": "ai",
         "image": {"src": "/images/tello-drone-face-tracker.png", "alt": "..."},
         "title": "Tello Drone Face Tracker",
-        "text": "<b>Autonomous</b> flight by processing the images taken with Tello drone. <b>6 DOF</b> maneuverable.",
+        "text": "<b>Autonomous</b> flight project by processing the images taken with Tello drone. <b>6 DOF</b> maneuverable.",
         "tags": [
             "Python",
             "Image Processing",
