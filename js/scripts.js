@@ -132,7 +132,7 @@ function playPauseVideo(videoName){
                 videoNames[video] = true;
             }
         }
-        // if video name not match
+        // if video name does not match
         else {
             pauseVideo(video);
             videoNames[video] = false;
