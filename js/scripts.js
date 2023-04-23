@@ -203,7 +203,7 @@ function loadProjects(){
                 }
 
                 const projectCard = `
-<!-- Portfolio Item id:${project.id} -->
+<!-- Portfolio Card: ${project.id} -->
 <div class="col-md-6 col-lg-4 mb-5 d-flex align-items-stretch">
     <div class="card card-container" category="${project.category}">
         ${projectImageSource}
