@@ -1,6 +1,6 @@
 [
     {
-        "id": 12,
+        "id": 22,
         "category": "ai",
         "image": {"src": "/images/tello-drone-face-tracker.png", "alt": "..."},
         "title": "Tello Drone Face Tracker",
@@ -15,7 +15,7 @@
         "page": {"href": "https://github.com/myoluk/tello-drone-face-tracker", "target": ""}
     },
     {
-        "id": 11,
+        "id": 21,
         "category": "software",
         "image": {"src": "/images/knock-detect-lock.png", "alt": "..."},
         "title": "Knock Detect Lock",
@@ -29,7 +29,7 @@
         "page": {"href": "https://github.com/myoluk/university-courses/tree/main/embedded-system-design", "target": ""}
     },
     {
-        "id": 10,
+        "id": 20,
         "category": "game",
         "image": {"src": "/images/coins-claim.mp4", "alt": "..."},
         "title": "Coins Claim Smoothly",
@@ -44,7 +44,7 @@
         "page": {"href": "https://github.com/myoluk/coins-claim-smoothly-script", "target": ""}
     },
     {
-        "id": 9,
+        "id": 19,
         "category": "ai software",
         "image": {"src": "/images/virtual-paint.mp4", "alt": "..."},
         "title": "Virtual Paint",
@@ -59,7 +59,7 @@
         "page": {"href": "https://github.com/myoluk/virtual-paint", "target": ""}
     },
     {
-        "id": 8,
+        "id": 18,
         "category": "game",
         "image": {"src": "/images/inside-paradox.mp4", "alt": "..."},
         "title": "Inside Paradox - Platformer Puzzle Game",
@@ -74,7 +74,7 @@
         "page": {"href": "https://myoluk.itch.io/inside-paradox", "target": ""}
     },
     {
-        "id": 7,
+        "id": 17,
         "category": "game",
         "image": {"src": "/images/space-adventure.mp4", "alt": "..."},
         "title": "Space Adventure - Mobile Endless Action Game",
@@ -89,7 +89,7 @@
         "page": {"href": "https://myoluk.itch.io/space-adventure", "target": ""}
     },
     {
-        "id": 6,
+        "id": 16,
         "category": "game software",
         "image": {"src": "/images/turkish-backgammon.png", "alt": "..."},
         "title": "Turkish Backgammon JS",
@@ -103,7 +103,7 @@
         "page": {"href": "https://github.com/myoluk/turkish-backgammon", "target": ""}
     },
     {
-        "id": 5,
+        "id": 15,
         "category": "software",
         "image": {"src": "/images/image-encryption.png", "alt": "..."},
         "title": "Image Encryption Project",
@@ -118,7 +118,7 @@
         "page": {"href": "https://github.com/myoluk/image-encryption", "target": ""}
     },
     {
-        "id": 4,
+        "id": 14,
         "category": "ai",
         "image": {"src": "/images/default-dots.png", "alt": "..."},
         "title": "Optimization Algorithms Comparison",
@@ -132,7 +132,7 @@
         "page": {"href": "https://github.com/myoluk/deeplearning-optimization-algorithms-comparison", "target": ""}
     },
     {
-        "id": 3,
+        "id": 13,
         "category": "ai",
         "image": {"src": "/images/default-dots.png", "alt": "..."},
         "title": "Initialization Methods Comparison",
@@ -146,7 +146,7 @@
         "page": {"href": "https://github.com/myoluk/deeplearning-initialization-methods-comparison", "target": ""}
     },
     {
-        "id": 2,
+        "id": 12,
         "category": "ai",
         "image": {"src": "/images/default-code.png", "alt": "..."},
         "title": "Vectorized Computing Comparison",
@@ -160,7 +160,7 @@
         "page": {"href": "https://github.com/myoluk/deeplearning-vectorization-comparison", "target": ""}
     },
     {
-        "id": 1,
+        "id": 10,
         "category": "software ai",
         "image": {"src": "/images/university-courses.png", "alt": "..."},
         "title": "University Courses",
