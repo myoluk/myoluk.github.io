@@ -1,6 +1,6 @@
 [
     {
-        "id": 22,
+        "id": 21,
         "category": "ai",
         "image": {"src": "/images/tello-drone-face-tracker.png", "alt": "..."},
         "title": "Tello Drone Face Tracker",
@@ -15,7 +15,7 @@
         "page": {"href": "https://github.com/myoluk/tello-drone-face-tracker", "target": ""}
     },
     {
-        "id": 19,
+        "id": 20,
         "category": "ai software",
         "image": {"src": "/images/virtual-paint.mp4", "alt": "..."},
         "title": "Virtual Paint",
@@ -30,7 +30,7 @@
         "page": {"href": "https://github.com/myoluk/virtual-paint", "target": ""}
     },
     {
-        "id": 18,
+        "id": 19,
         "category": "game",
         "image": {"src": "/images/inside-paradox.mp4", "alt": "..."},
         "title": "Inside Paradox - Platformer Puzzle Game",
@@ -45,7 +45,7 @@
         "page": {"href": "https://myoluk.itch.io/inside-paradox", "target": ""}
     },
     {
-        "id": 17,
+        "id": 18,
         "category": "game",
         "image": {"src": "/images/space-adventure.mp4", "alt": "..."},
         "title": "Space Adventure - Mobile Endless Action Game",
@@ -60,7 +60,7 @@
         "page": {"href": "https://myoluk.itch.io/space-adventure", "target": ""}
     },
     {
-        "id": 20,
+        "id": 17,
         "category": "game",
         "image": {"src": "/images/coins-claim.mp4", "alt": "..."},
         "title": "Coins Claim Smoothly",
@@ -104,7 +104,7 @@
         "page": {"href": "https://github.com/myoluk/image-encryption", "target": ""}
     },
     {
-        "id": 21,
+        "id": 14,
         "category": "software",
         "image": {"src": "/images/knock-detect-lock.png", "alt": "..."},
         "title": "Knock Detect Lock",
@@ -118,7 +118,7 @@
         "page": {"href": "https://github.com/myoluk/university-courses/tree/main/embedded-system-design", "target": ""}
     },
     {
-        "id": 14,
+        "id": 13,
         "category": "ai",
         "image": {"src": "/images/default-dots.png", "alt": "..."},
         "title": "Optimization Algorithms Comparison",
@@ -132,7 +132,7 @@
         "page": {"href": "https://github.com/myoluk/deeplearning-optimization-algorithms-comparison", "target": ""}
     },
     {
-        "id": 13,
+        "id": 12,
         "category": "ai",
         "image": {"src": "/images/default-dots.png", "alt": "..."},
         "title": "Initialization Methods Comparison",
@@ -146,7 +146,7 @@
         "page": {"href": "https://github.com/myoluk/deeplearning-initialization-methods-comparison", "target": ""}
     },
     {
-        "id": 12,
+        "id": 11,
         "category": "ai",
         "image": {"src": "/images/default-code.png", "alt": "..."},
         "title": "Vectorized Computing Comparison",
