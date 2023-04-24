@@ -150,8 +150,8 @@ function loadProjects(){
         .then(projects => {
             
             // Sort card items by id list
-            let idsToSortBy = [12, 9, 8, 7, 10, 6, 5, 11, 4, 3, 2, 1];
-            projects.sort((a, b) => idsToSortBy.indexOf(a.id) - idsToSortBy.indexOf(b.id));
+            // let idsToSortBy = [22, 19, 18, 17, 20, 16, 15, 21, 14, 13, 12, 10];
+            // projects.sort((a, b) => idsToSortBy.indexOf(a.id) - idsToSortBy.indexOf(b.id));
 
             // Loop through each project and create a project card
             projects.forEach(project => {
