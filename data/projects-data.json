@@ -93,7 +93,7 @@
         "category": "software",
         "image": {"src": "/images/image-encryption.png", "alt": "..."},
         "title": "Image Encryption Project",
-        "text": "Image Encryption/Decryption <b>C#</b> project. The algorithm developed by me.",
+        "text": "🖼️ Image Encryption/Decryption <b>C#</b> project. The algorithm developed by me.",
         "tags": [
             "Cryptology",
             "Image",
