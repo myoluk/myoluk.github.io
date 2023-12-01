@@ -198,8 +198,11 @@ function loadProjects(){
                 else if (project.page.href.includes('youtube.com') || project.page.href.includes('youtu.be')){
                     projectPageIcon = `<i class="fab fa-youtube fa-fw me-1"></i>github`;
                 }
+                else if (project.page.href.includes('linkedin.com')){
+                    projectPageIcon = `<i class="fab fa-fw fa-linkedin me-1"></i>linkedin`;
+                }
                 else {
-                    projectPageIcon = `<i class="fas fa-fw fa-link me-1"></i>itch.io`;
+                    projectPageIcon = `<i class="fas fa-fw fa-link me-1"></i>link`;
                 }
 
                 const projectCard = `
