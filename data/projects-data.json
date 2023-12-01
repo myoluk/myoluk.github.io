@@ -1,5 +1,20 @@
 [
     {
+        "id": 22,
+        "category": "game",
+        "image": {"src": "/images/default-code.png", "alt": "..."},
+        "title": "PolyPaint Arena",
+        "text": "🎮 Prototype for 1v1 online mobile game using <b>Unity</b> and <b>Photon Engine</b>.",
+        "tags": [
+            "Unity",
+            "Photon Engine",
+            "Game",
+            "Online",
+            "Mobile"
+        ],
+        "page": {"href": "https://www.linkedin.com/feed/update/urn:li:activity:7103722241518911488", "target": ""}
+    },
+    {
         "id": 21,
         "category": "ai",
         "image": {"src": "/images/tello-drone-face-tracker.png", "alt": "..."},
