@@ -190,13 +190,13 @@ function loadProjects(){
 
                 let projectPageIcon = '';
                 if (project.page.href.includes('github.com')){
-                    projectPageIcon = `<i class="fab fa-github fa-fw me-1"></i>github`;
+                    projectPageIcon = `<i class="fab fa-fw fa-github me-1"></i>github`;
                 }
                 else if (project.page.href.includes('itch.io')){
                     projectPageIcon = `<i class="fas fa-fw fa-gamepad me-1"></i>itch.io`;
                 }
                 else if (project.page.href.includes('youtube.com') || project.page.href.includes('youtu.be')){
-                    projectPageIcon = `<i class="fab fa-youtube fa-fw me-1"></i>github`;
+                    projectPageIcon = `<i class="fab fa-fw fa-youtube me-1"></i>github`;
                 }
                 else if (project.page.href.includes('linkedin.com')){
                     projectPageIcon = `<i class="fab fa-fw fa-linkedin me-1"></i>linkedin`;
