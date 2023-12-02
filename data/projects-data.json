@@ -4,7 +4,7 @@
         "category": "game",
         "image": {"src": "/images/polypaint-arena.png", "alt": "..."},
         "title": "PolyPaint Arena",
-        "text": "🎮 Prototype for 1v1 online mobile game using <b>Unity</b> and <b>Photon Engine</b>.",
+        "text": "🎮 Prototype of 1v1 online mobile game using <b>Unity</b> and <b>Photon Engine</b>.",
         "tags": [
             "Unity",
             "Photon Engine",
