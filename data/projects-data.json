@@ -19,7 +19,7 @@
         "category": "ai",
         "image": {"src": "/images/tello-drone-face-tracker.png", "alt": "..."},
         "title": "Tello Drone Face Tracker",
-        "text": "<b>Autonomous (6 DOF)</b> flight project by processing the images taken with Tello drone.",
+        "text": "<b>🛩️ Autonomous (6 DOF)</b> flight project by processing the images taken with Tello drone.",
         "tags": [
             "Python",
             "Image Processing",
@@ -137,7 +137,7 @@
         "category": "ai",
         "image": {"src": "/images/default-dots.png", "alt": "..."},
         "title": "Optimization Algorithms Comparison",
-        "text": "Gradient Descent, GD with Momentum, and Adam optimization algorithms comparison on deep learning.",
+        "text": "🆚 Gradient Descent, GD with Momentum, and Adam optimization algorithms comparison on deep learning.",
         "tags": [
             "Deep Learning",
             "Optimization",
@@ -151,7 +151,7 @@
         "category": "ai",
         "image": {"src": "/images/default-dots.png", "alt": "..."},
         "title": "Initialization Methods Comparison",
-        "text": "Zero, Random, and He initializations comparison on deep learning.",
+        "text": "🆚 Zero, Random, and He initializations comparison on deep learning.",
         "tags": [
             "Deep learning",
             "Initialization",
