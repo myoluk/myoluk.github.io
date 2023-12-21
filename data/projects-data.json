@@ -47,7 +47,7 @@
     {
         "id": 19,
         "category": "game",
-        "image": {"src": "/images/inside-paradox-main.png", "alt": "..."},
+        "image": {"src": "/images/inside-paradox.png", "alt": "..."},
         "title": "Inside Paradox - Platformer Puzzle Game",
         "text": "🎮 <b>Unity</b> platformer/puzzle game for Windows and WebGL. Developed for <b>Google Game and App Academy</b> capstone.",
         "tags": [
