@@ -140,6 +140,28 @@ function playPauseVideo(videoName){
     }
 }
 
+function getCardPageIcon(pageAddress){
+    let projectPageIcon;
+
+    if (pageAddress.includes('github.com')){
+        projectPageIcon = `<i class="fab fa-fw fa-github me-1"></i>github`;
+    }
+    else if (pageAddress.includes('itch.io')){
+        projectPageIcon = `<i class="fas fa-fw fa-gamepad me-1"></i>itch.io`;
+    }
+    else if (pageAddress.includes('youtube.com') || pageAddress.includes('youtu.be')){
+        projectPageIcon = `<i class="fab fa-fw fa-youtube me-1"></i>github`;
+    }
+    else if (pageAddress.includes('linkedin.com')){
+        projectPageIcon = `<i class="fab fa-fw fa-linkedin me-1"></i>linkedin`;
+    }
+    else {
+        projectPageIcon = `<i class="fas fa-fw fa-link me-1"></i>link`;
+    }
+
+    return projectPageIcon;
+}
+
 function loadProjects(){
     // Parent element
     const portfolioItems = document.getElementById('portfolio-items');
@@ -188,22 +210,8 @@ function loadProjects(){
                     tagElements += `<mark>${tag}</mark> `;
                 });
 
-                let projectPageIcon = '';
-                if (project.page.href.includes('github.com')){
-                    projectPageIcon = `<i class="fab fa-fw fa-github me-1"></i>github`;
-                }
-                else if (project.page.href.includes('itch.io')){
-                    projectPageIcon = `<i class="fas fa-fw fa-gamepad me-1"></i>itch.io`;
-                }
-                else if (project.page.href.includes('youtube.com') || project.page.href.includes('youtu.be')){
-                    projectPageIcon = `<i class="fab fa-fw fa-youtube me-1"></i>github`;
-                }
-                else if (project.page.href.includes('linkedin.com')){
-                    projectPageIcon = `<i class="fab fa-fw fa-linkedin me-1"></i>linkedin`;
-                }
-                else {
-                    projectPageIcon = `<i class="fas fa-fw fa-link me-1"></i>link`;
-                }
+                // card bottom address page & icon
+                let projectPageIcon = getCardPageIcon(project.page.href);
 
                 const projectCard = `
 <!-- Portfolio Card: ${project.id} -->
