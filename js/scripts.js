@@ -167,7 +167,7 @@ function loadProjects(){
     const portfolioItems = document.getElementById('portfolio-items');
 
     // Load the portfolio items from the JSON file
-    fetch('/data/projects-data.json')
+    fetch('/data/projects.json')
         .then(response => response.json())
         .then(projects => {
             
