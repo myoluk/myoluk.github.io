@@ -12,7 +12,7 @@
             "Online",
             "Mobile"
         ],
-        "page": {"href": "https://www.linkedin.com/feed/update/urn:li:activity:7103722241518911488", "target": ""}
+        "page": {"href": "https://www.linkedin.com/feed/update/urn:li:activity:7103722241518911488", "target": "_blank"}
     },
     {
         "id": 21,
@@ -27,7 +27,7 @@
             "DJI Tello",
             "Drone"
         ],
-        "page": {"href": "https://github.com/myoluk/tello-drone-face-tracker", "target": ""}
+        "page": {"href": "https://github.com/myoluk/tello-drone-face-tracker", "target": "_blank"}
     },
     {
         "id": 20,
@@ -42,7 +42,7 @@
             "Image Processing",
             "OpenCV"
         ],
-        "page": {"href": "https://github.com/myoluk/virtual-paint", "target": ""}
+        "page": {"href": "https://github.com/myoluk/virtual-paint", "target": "_blank"}
     },
     {
         "id": 19,
@@ -57,7 +57,7 @@
             "Platformer",
             "Puzzle"
         ],
-        "page": {"href": "https://myoluk.itch.io/inside-paradox", "target": ""}
+        "page": {"href": "https://myoluk.itch.io/inside-paradox", "target": "_blank"}
     },
     {
         "id": 18,
@@ -72,7 +72,7 @@
             "Game", 
             "Endless"
         ],
-        "page": {"href": "https://myoluk.itch.io/space-adventure", "target": ""}
+        "page": {"href": "https://myoluk.itch.io/space-adventure", "target": "_blank"}
     },
     {
         "id": 17,
@@ -87,7 +87,7 @@
             "Claim",
             "DOtween"
         ],
-        "page": {"href": "https://github.com/myoluk/coins-claim-smoothly-script", "target": ""}
+        "page": {"href": "https://github.com/myoluk/coins-claim-smoothly-script", "target": "_blank"}
     },
     {
         "id": 16,
@@ -101,7 +101,7 @@
             "Turkish",
             "JavaScript"
         ],
-        "page": {"href": "https://github.com/myoluk/turkish-backgammon", "target": ""}
+        "page": {"href": "https://github.com/myoluk/turkish-backgammon", "target": "_blank"}
     },
     {
         "id": 15,
@@ -116,7 +116,7 @@
             "Decryption",
             "C-Sharp"
         ],
-        "page": {"href": "https://github.com/myoluk/image-encryption", "target": ""}
+        "page": {"href": "https://github.com/myoluk/image-encryption", "target": "_blank"}
     },
     {
         "id": 14,
@@ -130,7 +130,7 @@
             "University",
             "Course"
         ],
-        "page": {"href": "https://github.com/myoluk/university-courses/tree/main/embedded-system-design", "target": ""}
+        "page": {"href": "https://github.com/myoluk/university-courses/tree/main/embedded-system-design", "target": "_blank"}
     },
     {
         "id": 13,
@@ -144,7 +144,7 @@
             "Algorithms",
             "Compare"
         ],
-        "page": {"href": "https://github.com/myoluk/deeplearning-optimization-algorithms-comparison", "target": ""}
+        "page": {"href": "https://github.com/myoluk/deeplearning-optimization-algorithms-comparison", "target": "_blank"}
     },
     {
         "id": 12,
@@ -158,7 +158,7 @@
             "Algorithms",
             "Compare"
         ],
-        "page": {"href": "https://github.com/myoluk/deeplearning-initialization-methods-comparison", "target": ""}
+        "page": {"href": "https://github.com/myoluk/deeplearning-initialization-methods-comparison", "target": "_blank"}
     },
     {
         "id": 11,
@@ -172,7 +172,7 @@
             "Algorithms",
             "Compare"
         ],
-        "page": {"href": "https://github.com/myoluk/deeplearning-vectorization-comparison", "target": ""}
+        "page": {"href": "https://github.com/myoluk/deeplearning-vectorization-comparison", "target": "_blank"}
     },
     {
         "id": 10,
@@ -187,6 +187,6 @@
             "Projects",
             "Works"
         ],
-        "page": {"href": "https://github.com/myoluk/university-courses", "target": ""}
+        "page": {"href": "https://github.com/myoluk/university-courses", "target": "_blank"}
     }
 ]
