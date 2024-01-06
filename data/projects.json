@@ -165,7 +165,7 @@
         "category": "ai",
         "image": {"src": "/images/default-code.png", "alt": "..."},
         "title": "Vectorized Computing Comparison",
-        "text": "😲 Vectorized computing <b>394x</b> faster than non-vectorized.",
+        "text": "🆚 Vectorized computing <b>394x</b> faster than non-vectorized.",
         "tags": [
             "Deep Learning",
             "Computing",
