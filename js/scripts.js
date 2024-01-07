@@ -201,7 +201,7 @@ function loadProjects(){
                 // image source
                 else {
                     projectImageSource = `
-        <img class="card-img-top" src="${project.image.src}" alt="${project.image.alt}">            
+        <img class="card-img-top" src="${project.image.src}" alt="${project.title}">
                     `;
                 }
 
