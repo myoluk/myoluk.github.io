@@ -155,6 +155,9 @@ function getCardPageIcon(pageAddress){
     else if (pageAddress.includes('linkedin.com')){
         projectPageIcon = `<i class="fab fa-fw fa-linkedin me-1"></i>linkedin`;
     }
+    else if (pageAddress.includes('medium.com')){
+        projectPageIcon = `<i class="fab fa-fw fa-medium me-1"></i>linkedin`;
+    }
     else {
         projectPageIcon = `<i class="fas fa-fw fa-link me-1"></i>link`;
     }
