@@ -165,6 +165,10 @@ function getCardPageIcon(pageAddress){
     return projectPageIcon;
 }
 
+function isSourceVideo(src){
+    return src.includes(".mp4")
+}
+
 function loadProjects(){
     // Parent element
     const portfolioItems = document.getElementById('portfolio-items');
@@ -185,14 +189,15 @@ function loadProjects(){
 
                 // video source
                 let projectImageSource = '';
-                if (project.image.src.includes(".mp4")){
-                    let projectVideoName = project.image.src.substring(
-                        project.image.src.lastIndexOf("/") + 1,
-                        project.image.src.lastIndexOf("."));
-                    projectPosterSrc = project.image.src.replace(".mp4", ".png");
+                let imageSrc = project.image.src;
+                if (isSourceVideo(imageSrc)){
+                    let projectVideoName = imageSrc.substring(
+                        imageSrc.lastIndexOf("/") + 1,
+                        imageSrc.lastIndexOf("."));
+                    projectPosterSrc = imageSrc.replace(".mp4", ".png");
                     projectImageSource = `
         <video id="${projectVideoName}" class="card-img-top" width="100%" poster="${projectPosterSrc}" onclick="playPauseVideo('${projectVideoName}')" loop>
-            <source src="${project.image.src}" type="video/mp4">
+            <source src="${imageSrc}" type="video/mp4">
             ${project.image.alt}
         </video>
         <div id="pb-${projectVideoName}" class="play-button"><i class="fa fa-play"></i></div>
@@ -204,7 +209,7 @@ function loadProjects(){
                 // image source
                 else {
                     projectImageSource = `
-        <img class="card-img-top" src="${project.image.src}" alt="${project.title}">
+        <img class="card-img-top" src="${imageSrc}" alt="${project.title}">
                     `;
                 }
 
