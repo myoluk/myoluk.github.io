@@ -64,7 +64,7 @@
         "category": "game",
         "image": {"src": "/images/space-adventure.mp4", "alt": "..."},
         "title": "Space Adventure - Mobile Endless Action Game",
-        "text": "<b>👾 Unity</b> 2D action game for <b>Android</b>. Developed as part of <b>Turkcell Unity</b> trainings.</p>",
+        "text": "<b>👾 Unity</b> 2D action game for <b>Android</b>. Developed as part of <b>Turkcell Unity</b> trainings.",
         "tags": [
             "Unity", 
             "Android", 
