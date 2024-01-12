@@ -56,7 +56,7 @@ function initTabElements(){
     tabElements[0].style.color = '#2C3E50';
 }
 
-function modifySelected(category) {
+function modifySelectedCategory(category) {
     for (let i=0; i<tabElements.length; i++){
         let tabElement = tabElements[i];
         if (tabElement.getAttribute('name').toLowerCase() == category){
@@ -72,7 +72,7 @@ function modifySelected(category) {
 
 function showCategory(category) {
     category = category.toLowerCase();
-    modifySelected(category);
+    modifySelectedCategory(category);
     if (category == 'all'){
         showCategoryAll();
         return;
@@ -106,22 +106,20 @@ function pauseVideo(videoName){
     playButton.innerHTML = "<i class='fa fa-play'></i>";
 }
 
-function playPauseVideo(videoName){
+function playSingleVideo(videoName){
     for (let video in videoNames){
-        // if video name matchs
         if (video == videoName){
             // if video is playing pause it
             if (videoNames[video]){
                 pauseVideo(video);
                 videoNames[video] = false;
             }
-            // if video is not playing play it
             else {
                 playVideo(video);
                 videoNames[video] = true;
             }
         }
-        // if video name does not match
+        // other videos
         else {
             pauseVideo(video);
             videoNames[video] = false;
@@ -185,7 +183,7 @@ function loadProjects(){
                         imageSrc.lastIndexOf("."));
                     projectPosterSrc = imageSrc.replace(".mp4", ".png");
                     projectImageSource = `
-        <video id="${projectVideoName}" class="card-img-top" width="100%" poster="${projectPosterSrc}" onclick="playPauseVideo('${projectVideoName}')" loop>
+        <video id="${projectVideoName}" class="card-img-top" width="100%" poster="${projectPosterSrc}" onclick="playSingleVideo('${projectVideoName}')" loop>
             <source src="${imageSrc}" type="video/mp4">
             ${project.image.alt}
         </video>
