@@ -1,6 +1,6 @@
 var cardElements;
 var tabElements;
-var videoNames = {};
+var videoPlayList = {};
 
 window.addEventListener('DOMContentLoaded', event => {
     loadProjects();
@@ -107,22 +107,23 @@ function pauseVideo(videoName){
 }
 
 function playSingleVideo(videoName){
-    for (let video in videoNames){
-        if (video == videoName){
+    for (let video in videoPlayList){
+        let isCurrentVideo = video == videoName;
+
+        if (isCurrentVideo){
             // if video is playing pause it
-            if (videoNames[video]){
+            if (videoPlayList[video]){
                 pauseVideo(video);
-                videoNames[video] = false;
+                videoPlayList[video] = false;
             }
             else {
                 playVideo(video);
-                videoNames[video] = true;
+                videoPlayList[video] = true;
             }
         }
-        // other videos
         else {
             pauseVideo(video);
-            videoNames[video] = false;
+            videoPlayList[video] = false;
         }
     }
 }
@@ -190,7 +191,7 @@ function loadProjects(){
         <div id="pb-${projectVideoName}" class="play-button"><i class="fa fa-play"></i></div>
                     `;
 
-                    videoNames[projectVideoName] = false;
+                    videoPlayList[projectVideoName] = false;
                 }
     
                 // image source
