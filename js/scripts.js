@@ -4,7 +4,7 @@ var videoPlayList = {};
 
 window.addEventListener('DOMContentLoaded', event => {
     loadProjects();
-    initTabElements();
+    modifyCategoryElement();
 
     // Navbar shrink function
     var navbarShrink = function () {
@@ -50,7 +50,7 @@ window.addEventListener('DOMContentLoaded', event => {
 
 });
 
-function initTabElements(){
+function modifyCategoryElement(){
     tabElements = document.querySelectorAll(".tab-category");
     tabElements[0].style.textDecoration = 'none';
     tabElements[0].style.color = '#2C3E50';
