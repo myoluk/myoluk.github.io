@@ -2,10 +2,10 @@ var cardElements;
 var tabElements;
 var videoPlayList = {};
 
-window.addEventListener('DOMContentLoaded', event => {
-    loadProjects();
-    modifyCategoryElement();
+// load projects cards
+initPortfolioSection();
 
+window.addEventListener('DOMContentLoaded', event => {
     // Navbar shrink function
     var navbarShrink = function () {
         const navbarCollapsible = document.body.querySelector('#mainNav');
@@ -157,7 +157,10 @@ function isSourceVideo(src){
     return src.includes(".mp4")
 }
 
-function loadProjects(){
+function initPortfolioSection(){
+    // initialize category tabs
+    modifyCategoryElement();
+
     // Parent element
     const portfolioItems = document.getElementById('portfolio-items');
 
