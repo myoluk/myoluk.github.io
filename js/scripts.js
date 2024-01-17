@@ -50,7 +50,7 @@ window.addEventListener('DOMContentLoaded', event => {
 
 });
 
-function modifyCategoryElement(){
+function styleCategory(){
     tabElements = document.querySelectorAll(".tab-category");
     tabElements[0].style.textDecoration = 'none';
     tabElements[0].style.color = '#2C3E50';
@@ -70,11 +70,11 @@ function modifySelectedCategory(category) {
     }
 }
 
-function showCategory(category) {
+function selectCategory(category) {
     category = category.toLowerCase();
     modifySelectedCategory(category);
     if (category == 'all'){
-        showCategoryAll();
+        selectCategoryAll();
         return;
     }
     for(let i=0; i<cardElements.length; i++){
@@ -87,7 +87,7 @@ function showCategory(category) {
     }
 }
 
-function showCategoryAll() {
+function selectCategoryAll() {
     for(let i=0; i<cardElements.length; i++){
         cardElements[i].parentNode.classList.remove('d-none');
     }
@@ -159,7 +159,7 @@ function isSourceVideo(src){
 
 function initPortfolioSection(){
     // initialize category tabs
-    modifyCategoryElement();
+    styleCategory();
 
     // Parent element
     const portfolioItems = document.getElementById('portfolio-items');
