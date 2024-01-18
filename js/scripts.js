@@ -1,5 +1,5 @@
-var cardElements;
-var tabElements;
+var projectCardList;
+var categoryList;
 var videoPlayList = {};
 
 // load projects cards
@@ -50,69 +50,77 @@ window.addEventListener('DOMContentLoaded', event => {
 
 });
 
-function styleCategory(){
-    tabElements = document.querySelectorAll(".tab-category");
-    tabElements[0].style.textDecoration = 'none';
-    tabElements[0].style.color = '#2C3E50';
+function selectedCategoryStyle(categoryElement) {
+    categoryElement.style.textDecoration = 'none';
+    categoryElement.style.color = '#2C3E50';
 }
 
-function modifySelectedCategory(category) {
-    for (let i=0; i<tabElements.length; i++){
-        let tabElement = tabElements[i];
-        if (tabElement.getAttribute('name').toLowerCase() == category){
-            tabElement.style.textDecoration = 'none';
-            tabElement.style.color = '#2C3E50';
+function unselectedCategoryStyle(categoryElement) {
+    categoryElement.style.textDecoration = 'underline';
+    categoryElement.style.color = '#1abc9c';
+}
+
+function highlightCategory(categoryName) {
+    for (let i = 0; i < categoryList.length; i++) {
+        let categoryElement = categoryList[i];
+        if (categoryElement.getAttribute('name').toLowerCase() == categoryName) {
+            selectedCategoryStyle(categoryElement);
         }
         else {
-            tabElement.style.textDecoration = 'underline';
-            tabElement.style.color = '#1abc9c';
+            unselectedCategoryStyle(categoryElement);
         }
     }
 }
 
-function selectCategory(category) {
-    category = category.toLowerCase();
-    modifySelectedCategory(category);
-    if (category == 'all'){
-        selectCategoryAll();
+function selectCategory(categoryName) {
+    categoryName = categoryName.toLowerCase();
+    highlightCategory(categoryName);
+    if (categoryName == 'all') {
+        selectAllCategory();
         return;
     }
-    for(let i=0; i<cardElements.length; i++){
-        if (cardElements[i].getAttribute('category').includes(category)){
-            cardElements[i].parentNode.classList.remove('d-none');
+    for (let i = 0; i < projectCardList.length; i++) {
+        if (projectCardList[i].getAttribute('category').includes(categoryName)) {
+            projectCardList[i].parentNode.classList.remove('d-none');
         }
         else {
-            cardElements[i].parentNode.classList.add('d-none');
+            projectCardList[i].parentNode.classList.add('d-none');
         }
     }
 }
 
-function selectCategoryAll() {
-    for(let i=0; i<cardElements.length; i++){
-        cardElements[i].parentNode.classList.remove('d-none');
+function selectAllCategory() {
+    for (let i = 0; i < projectCardList.length; i++) {
+        projectCardList[i].parentNode.classList.remove('d-none');
     }
 }
 
-function playVideo(videoName){
+function initCategoryTab() {
+    categoryList = document.querySelectorAll(".category");
+    let firstCategoryElement = categoryList[0];
+    selectedCategoryStyle(firstCategoryElement);
+}
+
+function playVideo(videoName) {
     var video = document.getElementById(videoName);
     var playButton = document.getElementById('pb-' + videoName);
     video.play();
     playButton.innerHTML = "";
 }
-function pauseVideo(videoName){
+function pauseVideo(videoName) {
     var video = document.getElementById(videoName);
     var playButton = document.getElementById('pb-' + videoName);
     video.pause();
     playButton.innerHTML = "<i class='fa fa-play'></i>";
 }
 
-function playSingleVideo(videoName){
-    for (let video in videoPlayList){
+function playSingleVideo(videoName) {
+    for (let video in videoPlayList) {
         let isCurrentVideo = video == videoName;
 
-        if (isCurrentVideo){
+        if (isCurrentVideo) {
             // if video is playing pause it
-            if (videoPlayList[video]){
+            if (videoPlayList[video]) {
                 pauseVideo(video);
                 videoPlayList[video] = false;
             }
@@ -128,22 +136,22 @@ function playSingleVideo(videoName){
     }
 }
 
-function getCardPageIcon(pageAddress){
+function getCardPageIcon(pageAddress) {
     let projectPageIcon;
 
-    if (pageAddress.includes('github.com')){
+    if (pageAddress.includes('github.com')) {
         projectPageIcon = `<i class="fab fa-fw fa-github me-1"></i>github`;
     }
-    else if (pageAddress.includes('itch.io')){
+    else if (pageAddress.includes('itch.io')) {
         projectPageIcon = `<i class="fas fa-fw fa-gamepad me-1"></i>itch.io`;
     }
-    else if (pageAddress.includes('youtube.com') || pageAddress.includes('youtu.be')){
+    else if (pageAddress.includes('youtube.com') || pageAddress.includes('youtu.be')) {
         projectPageIcon = `<i class="fab fa-fw fa-youtube me-1"></i>github`;
     }
-    else if (pageAddress.includes('linkedin.com')){
+    else if (pageAddress.includes('linkedin.com')) {
         projectPageIcon = `<i class="fab fa-fw fa-linkedin me-1"></i>linkedin`;
     }
-    else if (pageAddress.includes('medium.com')){
+    else if (pageAddress.includes('medium.com')) {
         projectPageIcon = `<i class="fab fa-fw fa-medium me-1"></i>linkedin`;
     }
     else {
@@ -153,13 +161,13 @@ function getCardPageIcon(pageAddress){
     return projectPageIcon;
 }
 
-function isSourceVideo(src){
+function isSourceVideo(src) {
     return src.includes(".mp4")
 }
 
-function initPortfolioSection(){
+function initPortfolioSection() {
     // initialize category tabs
-    styleCategory();
+    initCategoryTab();
 
     // Parent element
     const portfolioItems = document.getElementById('portfolio-items');
@@ -168,7 +176,7 @@ function initPortfolioSection(){
     fetch('/data/projects.json')
         .then(response => response.json())
         .then(projects => {
-            
+
             // Sort card items by id list
             // let idsToSortBy = [22, 21, 19, 18, 17, 20, 16, 15, 14, 13, 12, 11, 10];
             // projects.sort((a, b) => idsToSortBy.indexOf(a.id) - idsToSortBy.indexOf(b.id));
@@ -181,7 +189,7 @@ function initPortfolioSection(){
                 // video source
                 let projectImageSource = '';
                 let imageSrc = project.image.src;
-                if (isSourceVideo(imageSrc)){
+                if (isSourceVideo(imageSrc)) {
                     let projectVideoName = imageSrc.substring(
                         imageSrc.lastIndexOf("/") + 1,
                         imageSrc.lastIndexOf("."));
@@ -196,7 +204,7 @@ function initPortfolioSection(){
 
                     videoPlayList[projectVideoName] = false;
                 }
-    
+
                 // image source
                 else {
                     projectImageSource = `
@@ -240,7 +248,7 @@ function initPortfolioSection(){
                 portfolioItems.insertAdjacentHTML('beforeend', projectCard);
 
                 // get all card elements
-                cardElements = document.querySelectorAll(".card-container");
+                projectCardList = document.querySelectorAll(".card-container");
             });
         })
         .catch(error => console.error(error));

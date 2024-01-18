@@ -1605,7 +1605,7 @@ button:not(:disabled) {
     padding: 0 .5rem
 }
 
-.tab-category {
+.category {
     color: var(--bs-teal);
     cursor: pointer;
     text-decoration: underline
