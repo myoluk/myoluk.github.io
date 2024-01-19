@@ -72,13 +72,20 @@ function highlightCategory(categoryName) {
     }
 }
 
+function showAllProject() {
+    for (let i = 0; i < projectCardList.length; i++) {
+        projectCardList[i].parentNode.classList.remove('d-none');
+    }
+}
+
 function showCategoryProject(categoryName) {
     for (let i = 0; i < projectCardList.length; i++) {
-        if (projectCardList[i].getAttribute('category').includes(categoryName)) {
-            projectCardList[i].parentNode.classList.remove('d-none');
+        let card = projectCardList[i];
+        if (card.getAttribute('category').includes(categoryName)) {
+            card.parentNode.classList.remove('d-none');
         }
         else {
-            projectCardList[i].parentNode.classList.add('d-none');
+            card.parentNode.classList.add('d-none');
         }
     }
 }
@@ -87,16 +94,10 @@ function selectCategory(categoryName) {
     categoryName = categoryName.toLowerCase();
     highlightCategory(categoryName);
     if (categoryName == 'all') {
-        selectAllCategory();
+        showAllProject();
         return;
     }
     showCategoryProject(categoryName);
-}
-
-function selectAllCategory() {
-    for (let i = 0; i < projectCardList.length; i++) {
-        projectCardList[i].parentNode.classList.remove('d-none');
-    }
 }
 
 function initCategoryTab() {
