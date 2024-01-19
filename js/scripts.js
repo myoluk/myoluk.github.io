@@ -50,12 +50,12 @@ window.addEventListener('DOMContentLoaded', event => {
 
 });
 
-function selectedCategoryStyle(categoryElement) {
+function modifySelectedCategory(categoryElement) {
     categoryElement.style.textDecoration = 'none';
     categoryElement.style.color = '#2C3E50';
 }
 
-function unselectedCategoryStyle(categoryElement) {
+function modifyUnselectedCategory(categoryElement) {
     categoryElement.style.textDecoration = 'underline';
     categoryElement.style.color = '#1abc9c';
 }
@@ -64,10 +64,21 @@ function highlightCategory(categoryName) {
     for (let i = 0; i < categoryList.length; i++) {
         let categoryElement = categoryList[i];
         if (categoryElement.getAttribute('name').toLowerCase() == categoryName) {
-            selectedCategoryStyle(categoryElement);
+            modifySelectedCategory(categoryElement);
         }
         else {
-            unselectedCategoryStyle(categoryElement);
+            modifyUnselectedCategory(categoryElement);
+        }
+    }
+}
+
+function showCategoryProject(categoryName) {
+    for (let i = 0; i < projectCardList.length; i++) {
+        if (projectCardList[i].getAttribute('category').includes(categoryName)) {
+            projectCardList[i].parentNode.classList.remove('d-none');
+        }
+        else {
+            projectCardList[i].parentNode.classList.add('d-none');
         }
     }
 }
@@ -79,14 +90,7 @@ function selectCategory(categoryName) {
         selectAllCategory();
         return;
     }
-    for (let i = 0; i < projectCardList.length; i++) {
-        if (projectCardList[i].getAttribute('category').includes(categoryName)) {
-            projectCardList[i].parentNode.classList.remove('d-none');
-        }
-        else {
-            projectCardList[i].parentNode.classList.add('d-none');
-        }
-    }
+    showCategoryProject(categoryName);
 }
 
 function selectAllCategory() {
@@ -98,7 +102,7 @@ function selectAllCategory() {
 function initCategoryTab() {
     categoryList = document.querySelectorAll(".category");
     let firstCategoryElement = categoryList[0];
-    selectedCategoryStyle(firstCategoryElement);
+    modifySelectedCategory(firstCategoryElement);
 }
 
 function playVideo(videoName) {
