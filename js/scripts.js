@@ -50,12 +50,12 @@ window.addEventListener('DOMContentLoaded', event => {
 
 });
 
-function modifySelectedCategory(categoryElement) {
+function modifySelectedCategoryElement(categoryElement) {
     categoryElement.style.textDecoration = 'none';
     categoryElement.style.color = '#2C3E50';
 }
 
-function modifyUnselectedCategory(categoryElement) {
+function modifyUnselectedCategoryElement(categoryElement) {
     categoryElement.style.textDecoration = 'underline';
     categoryElement.style.color = '#1abc9c';
 }
@@ -64,10 +64,10 @@ function highlightCategory(categoryName) {
     for (let i = 0; i < categoryList.length; i++) {
         let categoryElement = categoryList[i];
         if (categoryElement.getAttribute('name').toLowerCase() == categoryName) {
-            modifySelectedCategory(categoryElement);
+            modifySelectedCategoryElement(categoryElement);
         }
         else {
-            modifyUnselectedCategory(categoryElement);
+            modifyUnselectedCategoryElement(categoryElement);
         }
     }
 }
@@ -103,7 +103,7 @@ function selectCategory(categoryName) {
 function initCategoryTab() {
     categoryList = document.querySelectorAll(".category");
     let firstCategoryElement = categoryList[0];
-    modifySelectedCategory(firstCategoryElement);
+    modifySelectedCategoryElement(firstCategoryElement);
 }
 
 function playVideo(videoName) {
