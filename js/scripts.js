@@ -61,15 +61,15 @@ function modifyUnselectedCategoryElement(categoryElement) {
 }
 
 function highlightCategory(categoryName) {
-    for (let i = 0; i < categoryList.length; i++) {
-        let categoryElement = categoryList[i];
-        if (categoryElement.getAttribute('name').toLowerCase() == categoryName) {
+    categoryList.forEach(function(categoryElement) {
+        const categoryElementName = categoryElement.getAttribute('name').toLowerCase();
+        if (categoryElementName == categoryName) {
             modifySelectedCategoryElement(categoryElement);
         }
         else {
             modifyUnselectedCategoryElement(categoryElement);
         }
-    }
+    });
 }
 
 function showAllProject() {
@@ -79,15 +79,14 @@ function showAllProject() {
 }
 
 function showCategoryProject(categoryName) {
-    for (let i = 0; i < projectCardList.length; i++) {
-        let card = projectCardList[i];
+    projectCardList.forEach(function(card) {
         if (card.getAttribute('category').includes(categoryName)) {
             card.parentNode.classList.remove('d-none');
         }
         else {
             card.parentNode.classList.add('d-none');
         }
-    }
+    });
 }
 
 function selectCategory(categoryName) {
