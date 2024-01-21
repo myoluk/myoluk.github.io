@@ -73,9 +73,9 @@ function highlightCategory(categoryName) {
 }
 
 function showAllProject() {
-    for (let i = 0; i < projectCardList.length; i++) {
-        projectCardList[i].parentNode.classList.remove('d-none');
-    }
+    projectCardList.forEach(function(card) {
+        card.parentNode.classList.remove('d-none');
+    });
 }
 
 function showCategoryProject(categoryName) {
