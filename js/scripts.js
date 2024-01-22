@@ -109,33 +109,31 @@ function playVideo(videoName) {
     var video = document.getElementById(videoName);
     var playButton = document.getElementById('pb-' + videoName);
     video.play();
+    videoPlayList[videoName] = true;
     playButton.innerHTML = "";
 }
 function pauseVideo(videoName) {
     var video = document.getElementById(videoName);
     var playButton = document.getElementById('pb-' + videoName);
     video.pause();
+    videoPlayList[videoName] = false;
     playButton.innerHTML = "<i class='fa fa-play'></i>";
 }
 
 function playSingleVideo(videoName) {
     for (let video in videoPlayList) {
         let isCurrentVideo = video == videoName;
-
         if (isCurrentVideo) {
             // if video is playing pause it
             if (videoPlayList[video]) {
                 pauseVideo(video);
-                videoPlayList[video] = false;
             }
             else {
                 playVideo(video);
-                videoPlayList[video] = true;
             }
         }
         else {
             pauseVideo(video);
-            videoPlayList[video] = false;
         }
     }
 }
