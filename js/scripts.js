@@ -172,7 +172,7 @@ function initPortfolioSection() {
     initCategoryTab();
 
     // Parent element
-    const portfolioItems = document.getElementById('portfolio-items');
+    const portfolioSection = document.getElementById('portfolio-items');
 
     // Load the portfolio items from the JSON file
     fetch('/data/projects.json')
@@ -247,7 +247,7 @@ function initPortfolioSection() {
 </div>
                 `;
                 // Append the card to the portfolio deck
-                portfolioItems.insertAdjacentHTML('beforeend', projectCard);
+                portfolioSection.insertAdjacentHTML('beforeend', projectCard);
 
                 // get all card elements
                 projectCardList = document.querySelectorAll(".card-container");
