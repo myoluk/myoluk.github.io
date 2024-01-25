@@ -147,8 +147,9 @@ function getCardPageIcon(pageAddress) {
         ['medium.com',   `<i class="fab fa-fw fa-medium me-1"></i>medium`],
     ]);
 
+    var pageHostAddress = new URL(pageAddress).host
     for (const [key, value] of pageTypeMap)
-        if (pageAddress.includes(key))
+        if (pageHostAddress.includes(key))
           return value;
   	
   	// default icon
