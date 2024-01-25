@@ -17,7 +17,6 @@ window.addEventListener('DOMContentLoaded', event => {
         } else {
             navbarCollapsible.classList.add('navbar-shrink')
         }
-
     };
 
     // Shrink the navbar 
@@ -47,7 +46,6 @@ window.addEventListener('DOMContentLoaded', event => {
             }
         });
     });
-
 });
 
 function modifySelectedCategoryElement(categoryElement) {
@@ -139,28 +137,22 @@ function playSingleVideo(videoName) {
 }
 
 function getCardPageIcon(pageAddress) {
-    let projectPageIcon;
+    const pageTypeMap = new Map([
+        ['github.com',   `<i class="fab fa-fw fa-github me-1"></i>github`],
+        ['github.io',    `<i class="fab fa-fw fa-github me-1"></i>github`],
+        ['itch.io',		 `<i class="fas fa-fw fa-gamepad me-1"></i>itch.io`],
+        ['youtube.com',  `<i class="fab fa-fw fa-youtube me-1"></i>youtube`],
+        ['youtu.be', 	 `<i class="fab fa-fw fa-youtube me-1"></i>youtube`],
+        ['linkedin.com', `<i class="fab fa-fw fa-linkedin me-1"></i>linkedin`],
+        ['medium.com',   `<i class="fab fa-fw fa-medium me-1"></i>medium`],
+    ]);
 
-    if (pageAddress.includes('github.com')) {
-        projectPageIcon = `<i class="fab fa-fw fa-github me-1"></i>github`;
-    }
-    else if (pageAddress.includes('itch.io')) {
-        projectPageIcon = `<i class="fas fa-fw fa-gamepad me-1"></i>itch.io`;
-    }
-    else if (pageAddress.includes('youtube.com') || pageAddress.includes('youtu.be')) {
-        projectPageIcon = `<i class="fab fa-fw fa-youtube me-1"></i>github`;
-    }
-    else if (pageAddress.includes('linkedin.com')) {
-        projectPageIcon = `<i class="fab fa-fw fa-linkedin me-1"></i>linkedin`;
-    }
-    else if (pageAddress.includes('medium.com')) {
-        projectPageIcon = `<i class="fab fa-fw fa-medium me-1"></i>linkedin`;
-    }
-    else {
-        projectPageIcon = `<i class="fas fa-fw fa-link me-1"></i>link`;
-    }
-
-    return projectPageIcon;
+    for (const [key, value] of pageTypeMap)
+        if (pageAddress.includes(key))
+          return value;
+  	
+  	// default icon
+    return `<i class="fas fa-fw fa-link me-1"></i>link`;
 }
 
 function isSourceVideo(src) {
