@@ -60,7 +60,7 @@ function modifyUnselectedCategoryElement(categoryElement) {
 
 function highlightCategory(categoryName) {
     categoryList.forEach(function(categoryElement) {
-        const categoryElementName = categoryElement.getAttribute('name').toLowerCase();
+        let categoryElementName = categoryElement.getAttribute('name').toLowerCase();
         if (categoryElementName == categoryName) {
             modifySelectedCategoryElement(categoryElement);
         }
@@ -104,15 +104,15 @@ function initCategoryTab() {
 }
 
 function playVideo(videoName) {
-    var video = document.getElementById(videoName);
-    var playButton = document.getElementById('pb-' + videoName);
+    let video = document.getElementById(videoName);
+    let playButton = document.getElementById('pb-' + videoName);
     video.play();
     videoPlayList[videoName] = true;
     playButton.innerHTML = "";
 }
 function pauseVideo(videoName) {
-    var video = document.getElementById(videoName);
-    var playButton = document.getElementById('pb-' + videoName);
+    let video = document.getElementById(videoName);
+    let playButton = document.getElementById('pb-' + videoName);
     video.pause();
     videoPlayList[videoName] = false;
     playButton.innerHTML = "<i class='fa fa-play'></i>";
@@ -147,7 +147,7 @@ function getCardPageIcon(pageAddress) {
         ['medium.com',   `<i class="fab fa-fw fa-medium me-1"></i>medium`],
     ]);
 
-    var pageHostAddress = new URL(pageAddress).host
+    let pageHostAddress = new URL(pageAddress).host
     for (const [key, value] of pageTypeMap)
         if (pageHostAddress.includes(key))
           return value;
