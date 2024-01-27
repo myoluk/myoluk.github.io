@@ -160,6 +160,86 @@ function isSourceVideo(src) {
     return src.includes(".mp4")
 }
 
+function createCardTagHtml(project) {
+    // sort tags by alphabetic
+    // project.tags.sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
+    
+    let tagListHtml = '';
+    project.tags.forEach(tag => {
+        tagListHtml += `<mark>${tag}</mark> `;
+    });
+    return tagListHtml;
+}
+
+function createCardImageHtml(project) {
+    let imageSourceHtml = '';
+    let imageSrc = project.image.src;
+
+    // video source
+    if (isSourceVideo(imageSrc)) {
+        let projectVideoName = imageSrc.substring(
+            imageSrc.lastIndexOf("/") + 1,
+            imageSrc.lastIndexOf("."));
+        projectPosterSrc = imageSrc.replace(".mp4", ".png");
+        imageSourceHtml = `
+    <video id="${projectVideoName}" class="card-img-top" width="100%" poster="${projectPosterSrc}" onclick="playSingleVideo('${projectVideoName}')" loop>
+        <source src="${imageSrc}" type="video/mp4">
+        ${project.image.alt}
+    </video>
+    <div id="pb-${projectVideoName}" class="play-button"><i class="fa fa-play"></i></div>
+        `;
+        videoPlayList[projectVideoName] = false;
+    }
+
+    // image source
+    else {
+        imageSourceHtml = `
+    <img class="card-img-top" src="${imageSrc}" alt="${project.title}">
+        `;
+    }
+
+    return imageSourceHtml;
+}
+
+function createCardHtml(project) {
+    // card image or video
+    let imageSource = createCardImageHtml(project);
+
+    // card bottom address page & icon
+    let pageIcon = getCardPageIcon(project.page.href);
+
+    // card tag list
+    let tagElementList = createCardTagHtml(project);
+
+    // project card html
+    let projectCardHtmlText = `
+<!-- Portfolio Card: ${project.id} -->
+<div class="col-md-6 col-lg-4 mb-5 d-flex align-items-stretch">
+    <div class="card card-container" category="${project.category}">
+        ${imageSource}
+        <div class="card-body">
+            <h5 class="card-title"> <a class="card-page" href="${project.page.href}" target="${project.page.target}">
+                ${project.title}
+            </a></h5>
+            <p class="card-text text-secondary">${project.text}</p>
+            <div class="card-tag mb-3" title="Card: ${project.id}">
+                ${tagElementList}
+            </div>
+            <a class="card-page" href="${project.page.href}" target="${project.page.target}">
+                <div class="pt-4 w-100">
+                    <p class="card-muted position-absolute bottom-0 pb-3">
+                        <small class="text-muted">${pageIcon}</small>
+                    </p>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+    `;
+
+    return projectCardHtmlText;
+}
+
 function initPortfolioSection() {
     // initialize category tabs
     initCategoryTab();
@@ -171,80 +251,16 @@ function initPortfolioSection() {
     fetch('/data/projects.json')
         .then(response => response.json())
         .then(projects => {
-
             // Sort card items by id list
             // let idsToSortBy = [22, 21, 19, 18, 17, 20, 16, 15, 14, 13, 12, 11, 10];
             // projects.sort((a, b) => idsToSortBy.indexOf(a.id) - idsToSortBy.indexOf(b.id));
-
-            // Loop through each project and create a project card
             projects.forEach(project => {
-                // sort tags by alphabetic
-                // project.tags.sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
-
-                // video source
-                let projectImageSource = '';
-                let imageSrc = project.image.src;
-                if (isSourceVideo(imageSrc)) {
-                    let projectVideoName = imageSrc.substring(
-                        imageSrc.lastIndexOf("/") + 1,
-                        imageSrc.lastIndexOf("."));
-                    projectPosterSrc = imageSrc.replace(".mp4", ".png");
-                    projectImageSource = `
-        <video id="${projectVideoName}" class="card-img-top" width="100%" poster="${projectPosterSrc}" onclick="playSingleVideo('${projectVideoName}')" loop>
-            <source src="${imageSrc}" type="video/mp4">
-            ${project.image.alt}
-        </video>
-        <div id="pb-${projectVideoName}" class="play-button"><i class="fa fa-play"></i></div>
-                    `;
-
-                    videoPlayList[projectVideoName] = false;
-                }
-
-                // image source
-                else {
-                    projectImageSource = `
-        <img class="card-img-top" src="${imageSrc}" alt="${project.title}">
-                    `;
-                }
-
-                let tagElements = '';
-                project.tags.forEach(tag => {
-                    tagElements += `<mark>${tag}</mark> `;
-                });
-
-                // card bottom address page & icon
-                let projectPageIcon = getCardPageIcon(project.page.href);
-
-                const projectCard = `
-<!-- Portfolio Card: ${project.id} -->
-<div class="col-md-6 col-lg-4 mb-5 d-flex align-items-stretch">
-    <div class="card card-container" category="${project.category}">
-        ${projectImageSource}
-        <div class="card-body">
-            <h5 class="card-title"> <a class="card-page" href="${project.page.href}" target="${project.page.target}">
-                ${project.title}
-            </a></h5>
-            <p class="card-text text-secondary">${project.text}</p>
-            <div class="card-tag mb-3" title="Card: ${project.id}">
-                ${tagElements}
-            </div>
-            <a class="card-page" href="${project.page.href}" target="${project.page.target}">
-                <div class="pt-4 w-100">
-                    <p class="card-muted position-absolute bottom-0 pb-3">
-                        <small class="text-muted">${projectPageIcon}</small>
-                    </p>
-                </div>
-            </a>
-        </div>
-    </div>
-</div>
-                `;
-                // Append the card to the portfolio deck
-                portfolioSection.insertAdjacentHTML('beforeend', projectCard);
-
-                // get all card elements
-                projectCardList = document.querySelectorAll(".card-container");
+                let projectCardHtml = createCardHtml(project);
+                portfolioSection.insertAdjacentHTML('beforeend', projectCardHtml);
             });
         })
         .catch(error => console.error(error));
+
+    // get all card elements
+    projectCardList = document.querySelectorAll(".card-container");
 }
