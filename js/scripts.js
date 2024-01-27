@@ -258,9 +258,9 @@ function initPortfolioSection() {
                 let projectCardHtml = createCardHtml(project);
                 portfolioSection.insertAdjacentHTML('beforeend', projectCardHtml);
             });
+
+            // get all card elements for categorize
+            projectCardList = document.querySelectorAll(".card-container");
         })
         .catch(error => console.error(error));
-
-    // get all card elements
-    projectCardList = document.querySelectorAll(".card-container");
 }
